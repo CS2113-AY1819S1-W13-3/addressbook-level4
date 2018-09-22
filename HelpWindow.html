@@ -14,8 +14,8 @@
 <li><a href="#Features">3. Features</a>
 <ul class="sectlevel2">
 <li><a href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></li>
-<li><a href="#adding-a-person-code-add-code">3.2. Adding a person: <code>add</code></a></li>
-<li><a href="#listing-all-persons-code-list-code">3.3. Listing all persons : <code>list</code></a></li>
+<li><a href="#adding-a-task-code-add-code">3.2. Adding a task: <code>add</code></a></li>
+<li><a href="#adding-a-deadline-code-deadline-code">3.3. Adding a deadline: <code>deadline</code></a></li>
 <li><a href="#editing-a-person-code-edit-code">3.4. Editing a person : <code>edit</code></a></li>
 <li><a href="#locating-persons-by-name-code-find-code">3.5. Locating persons by name: <code>find</code></a></li>
 <li><a href="#deleting-a-person-code-delete-code">3.6. Deleting a person : <code>delete</code></a></li>
@@ -38,7 +38,7 @@
 <h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>AddressBook Level 4 (AB4) is for those who <strong>prefer to use a desktop app for managing contacts</strong>. More importantly, AB4 is <strong>optimized for those who prefer to work with a Command Line Interface</strong> (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, AB4 can get your contact management tasks done faster than traditional GUI apps. Interested? Jump to the <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started. Enjoy!</p>
+<p>Task Book is for students who prefer to use a desktop app for managing their daily tasks and ultimately, lead a more productive life. More importantly, AB is optimized for those who prefer to work with a Command Line Interface (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, AB can get your management of tasks done faster than traditional paper notebooks or a mobile application. Interested? Jump to the <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started. Enjoy!</p>
 </div>
 </div>
 </div>
@@ -73,13 +73,10 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <div class="ulist">
 <ul>
 <li>
-<p><strong><code>list</code></strong> : lists all contacts</p>
+<p><strong><code>list</code></strong> : lists all tasks for that day</p>
 </li>
 <li>
-<p><strong><code>add</code></strong><code>n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code> : adds a contact named <code>John Doe</code> to the Address Book.</p>
-</li>
-<li>
-<p><strong><code>delete</code></strong><code>3</code> : deletes the 3rd contact shown in the current list</p>
+<p><strong><code>add</code></strong><code>t/Complete 2113 Tutorial d/Wed</code> : adds a new task to the Task Book.</p>
 </li>
 <li>
 <p><strong><code>exit</code></strong> : exits the app</p>
@@ -127,10 +124,10 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-a-person-code-add-code"><a class="link" href="#adding-a-person-code-add-code">3.2. Adding a person: <code>add</code></a></h3>
+<h3 id="adding-a-task-code-add-code"><a class="link" href="#adding-a-task-code-add-code">3.2. Adding a task: <code>add</code></a></h3>
 <div class="paragraph">
-<p>Adds a person to the address book<br>
-Format: <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code></p>
+<p>Adds a task to the task book<br>
+Format: <code>add t/ACTION d/DAY [w/WEEK] [m/MONTH]&#8230;&#8203;</code></p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -150,19 +147,26 @@ A person can have any number of tags (including 0)
 <div class="ulist">
 <ul>
 <li>
-<p><code>add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code></p>
-</li>
-<li>
-<p><code>add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 t/criminal</code></p>
+<p><code>add t/Complete 2113 Tutorial d/Wed w/2</code></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-all-persons-code-list-code"><a class="link" href="#listing-all-persons-code-list-code">3.3. Listing all persons : <code>list</code></a></h3>
+<h3 id="adding-a-deadline-code-deadline-code"><a class="link" href="#adding-a-deadline-code-deadline-code">3.3. Adding a deadline: <code>deadline</code></a></h3>
 <div class="paragraph">
-<p>Shows a list of all persons in the address book.<br>
-Format: <code>list</code></p>
+<p>Adds an important task with deadline to the task book<br>
+Format: <code>deadline t/ACTION d/DAY [w/WEEK] [m/MONTH]</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>deadline t/Complete 2113 Milestone w/1 m/8</code></p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
@@ -479,23 +483,15 @@ There is no need to save manually.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Add</strong> <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague</code></p>
+<p><strong>Add</strong> : <code>add t/ACTION d/DAY [w/WEEK] [m/MONTH]&#8230;&#8203;</code><br>
+e.g. <code>add t/Complete 2113 Tutorial d/Wed w/2</code></p>
 </li>
 <li>
 <p><strong>Clear</strong> : <code>clear</code></p>
 </li>
 <li>
-<p><strong>Delete</strong> : <code>delete INDEX</code><br>
-e.g. <code>delete 3</code></p>
-</li>
-<li>
-<p><strong>Edit</strong> : <code>edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>edit 2 n/James Lee e/jameslee@example.com</code></p>
-</li>
-<li>
-<p><strong>Find</strong> : <code>find KEYWORD [MORE_KEYWORDS]</code><br>
-e.g. <code>find James Jake</code></p>
+<p><strong>Deadline</strong> : <code>deadline t/ACTION d/DAY [w/WEEK] [m/MONTH]&#8230;&#8203;</code><br>
+e.g. <code>deadline t/Complete 2113 Tutorial d/Wed w/2</code></p>
 </li>
 <li>
 <p><strong>List</strong> : <code>list</code></p>
@@ -519,4 +515,4 @@ e.g.<code>select 2</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-07-28 08:52:29 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-09-22 01:31:33 UTC</div></div></div></body></html>
