@@ -2085,27 +2085,27 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>2a. Student enters an invalid command format</p>
+<p>1a. Student enters an invalid command format</p>
 <div class="ulist">
 <ul>
 <li>
-<p>2a1. TB requests for a valid command</p>
+<p>1a1. TB requests for a valid command</p>
 </li>
 <li>
-<p>2a2. Student enters a new add command</p>
+<p>1a2. Student enters a new add command</p>
 <div class="paragraph">
-<p>Use case ends.</p>
+<p>Use case resumes at step 2.</p>
 </div>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>2b. Student enters a duplicated task</p>
+<p>1b. Student enters a duplicated task</p>
 <div class="ulist">
 <ul>
 <li>
-<p>2b1. TB outputs an error message</p>
+<p>1b1. TB outputs an error message</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2178,7 +2178,10 @@ for <code>RemarkCommandParser</code>.</p>
 <p>Student requests to sort his or her tasks for the day</p>
 </li>
 <li>
-<p>Student returns the method to sort the tasks</p>
+<p>TB asks for the criteria to sort the tasks.</p>
+</li>
+<li>
+<p>Student returns the method to sort tasks</p>
 </li>
 <li>
 <p>TB checks for its validity and display the sorted task list</p>
@@ -2194,14 +2197,11 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>2a. Student provided an invalid command format</p>
+<p>1b. Student requested to sort an empty taskbook</p>
 <div class="ulist">
 <ul>
 <li>
-<p>2a1. TB requests for a valid command</p>
-</li>
-<li>
-<p>2a2. Student enters a new Sort command</p>
+<p>1b1. TB outputs an error message</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2210,13 +2210,16 @@ for <code>RemarkCommandParser</code>.</p>
 </div>
 </li>
 <li>
-<p>2b. Student requested to sort an empty taskbook</p>
+<p>3a. Student provided an invalid sorting criteria</p>
 <div class="ulist">
 <ul>
 <li>
-<p>2b1. TB outputs an error message</p>
+<p>3a1. TB requests for a valid sorting criteria</p>
+</li>
+<li>
+<p>3a2. Student enters a new criteria</p>
 <div class="paragraph">
-<p>Use case ends.</p>
+<p>Use case resumes at step 4.</p>
 </div>
 </li>
 </ul>
@@ -2295,7 +2298,7 @@ for <code>RemarkCommandParser</code>.</p>
 <p>Student provides the number of weeks for deferment</p>
 </li>
 <li>
-<p>TB defers deadline</p>
+<p>TB defers deadline for task</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2375,7 +2378,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Student enters the view command</p>
+<p>Student requests to view date</p>
 </li>
 <li>
 <p>TB returns the date in d/DAY w/WEEK m/MONTH format</p>
@@ -2408,13 +2411,13 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>2a. Date entered by the student is not valid e.g. d/Tues w/5 m/9</p>
+<p>1a. Date entered by the student is not valid e.g. d/Tues w/5 m/9</p>
 <div class="ulist">
 <ul>
 <li>
-<p>2a1. TB prompts student to enter a correct date</p>
+<p>1a1. TB prompts student to enter a correct date</p>
 <div class="paragraph">
-<p>Use case ends.</p>
+<p>Use case resumes at step 2.</p>
 </div>
 </li>
 </ul>
@@ -2614,4 +2617,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-09-28 14:15:58 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-09-29 03:20:26 UTC</div></div></div></body></html>
