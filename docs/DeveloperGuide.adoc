@@ -848,7 +848,6 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 |`* * *` |messy student |view today's date |schedule tasks in an organised manner based on day, week, month
 
 |`* * *` |unorganised student |select a date |add/delete/complete tasks for that particular day
-|=======================================================================
 
 
 [appendix]
@@ -896,7 +895,7 @@ Use case ends.
 ** 1a1. TB requests for a valid command
 ** 1a2. Student returns a new Complete command
 +
-Use case resumes at step 2.
+Use case ends.
 
 * 1b. Student requests to complete a non-existent task
 ** 1b1. TB outputs an error message
