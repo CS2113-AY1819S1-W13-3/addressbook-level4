@@ -101,11 +101,11 @@ Examples:
 === Deferring a deadline: `deadline`
 
 Defers a deadline for a task +
-Format: `defer [INDEX] de/deadline`
+Format: `defer_deadline t/ACTION w/WEEKS_OF_DEFERMENT`
 
 Examples:
 
-* `defer 1 de/04012018`
+* `defer_deadline t/Complete 2113 Milestone w/1`
 
 === Removing a deadline : `remove_deadline`
 

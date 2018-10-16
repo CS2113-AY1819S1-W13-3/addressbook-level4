@@ -10,7 +10,6 @@ import seedu.address.logic.commands.ClearCommand;
 import seedu.address.logic.commands.Command;
 import seedu.address.logic.commands.CommandResult;
 import seedu.address.logic.commands.CompleteTaskCommand;
-import seedu.address.logic.commands.DeferDeadlineCommand;
 import seedu.address.logic.commands.DeleteCommand;
 import seedu.address.logic.commands.ExitCommand;
 import seedu.address.logic.commands.HelpCommand;
@@ -38,11 +37,9 @@ public class LogicManager extends ComponentManager implements Logic {
     public LogicManager(Model model) {
         this.model = model;
         history = new CommandHistory();
-        // need to add the commands into the list<CommandParser> commands in TaskBookParser
         taskBookParser = new TaskBookParser(new AddTaskCommand(),
                 new ClearCommand(),
                 new CompleteTaskCommand(),
-                new DeferDeadlineCommand(),
                 new DeleteCommand(),
                 new ListCommand(),
                 new SelectDeadlineCommand(),
