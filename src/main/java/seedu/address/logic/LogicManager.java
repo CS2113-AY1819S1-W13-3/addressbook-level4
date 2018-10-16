@@ -3,8 +3,8 @@ package seedu.address.logic;
 import java.util.logging.Logger;
 
 import javafx.collections.ObservableList;
-import unrefactored.commons.core.ComponentManager;
-import unrefactored.commons.core.LogsCenter;
+import seedu.address.commons.core.ComponentManager;
+import seedu.address.commons.core.LogsCenter;
 import seedu.address.logic.commands.AddTaskCommand;
 import seedu.address.logic.commands.ClearCommand;
 import seedu.address.logic.commands.Command;
@@ -16,6 +16,7 @@ import seedu.address.logic.commands.HelpCommand;
 import seedu.address.logic.commands.HistoryCommand;
 import seedu.address.logic.commands.ListCommand;
 import seedu.address.logic.commands.RedoCommand;
+import seedu.address.logic.commands.SelectDeadlineCommand;
 import seedu.address.logic.commands.UndoCommand;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.logic.parser.TaskBookParser;
@@ -44,6 +45,7 @@ public class LogicManager extends ComponentManager implements Logic {
                 new HelpCommand(),
                 new ExitCommand(),
                 new HistoryCommand(),
+                new SelectDeadlineCommand(),
                 new UndoCommand(),
                 new RedoCommand());
     }
