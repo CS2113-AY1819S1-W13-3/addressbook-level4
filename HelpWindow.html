@@ -18,18 +18,15 @@
 <li><a href="#adding-a-milestone-code-add_milestone-code">3.3. Adding a milestone: <code>add_milestone</code></a></li>
 <li><a href="#complete-a-task-code-complete-code">3.4. Complete a task: <code>complete</code></a></li>
 <li><a href="#sort-the-taskbook-code-sort-code">3.5. Sort the taskbook: <code>sort</code></a></li>
-<li><a href="#adding-a-deadline-code-deadline-code">3.6. Adding a deadline: <code>deadline</code></a></li>
-<li><a href="#deferring-a-deadline-code-deadline-code">3.7. Deferring a deadline: <code>deadline</code></a></li>
-<li><a href="#removing-a-deadline-code-remove_deadline-code">3.8. Removing a deadline : <code>remove_deadline</code></a></li>
-<li><a href="#viewing-today-s-date-code-view-code">3.9. Viewing today&#8217;s date : <code>view</code></a></li>
-<li><a href="#selecting-a-date-code-select-code">3.10. Selecting a date: <code>select</code></a></li>
-<li><a href="#listing-entered-commands-code-history-code">3.11. Listing entered commands : <code>history</code></a></li>
-<li><a href="#undoing-previous-command-code-undo-code">3.12. Undoing previous command : <code>undo</code></a></li>
-<li><a href="#redoing-the-previously-undone-command-code-redo-code">3.13. Redoing the previously undone command : <code>redo</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">3.14. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">3.15. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">3.16. Saving the data</a></li>
-<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.17. Encrypting data files <code>[coming in v2.0]</code></a></li>
+<li><a href="#deferring-a-deadline-code-deadline-code">3.6. Deferring a deadline: <code>deadline</code></a></li>
+<li><a href="#selecting-a-date-code-select-code">3.7. Selecting a date: <code>select</code></a></li>
+<li><a href="#listing-entered-commands-code-history-code">3.8. Listing entered commands : <code>history</code></a></li>
+<li><a href="#undoing-previous-command-code-undo-code">3.9. Undoing previous command : <code>undo</code></a></li>
+<li><a href="#redoing-the-previously-undone-command-code-redo-code">3.10. Redoing the previously undone command : <code>redo</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code">3.11. Clearing all entries : <code>clear</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">3.12. Exiting the program : <code>exit</code></a></li>
+<li><a href="#saving-the-data">3.13. Saving the data</a></li>
+<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.14. Encrypting data files <code>[coming in v2.0]</code></a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -186,24 +183,7 @@ Format: <code>sort t/ACTION d/DAY [w/WEEK] [m/MONTH]&#8230;&#8203;</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-a-deadline-code-deadline-code"><a class="link" href="#adding-a-deadline-code-deadline-code">3.6. Adding a deadline: <code>deadline</code></a></h3>
-<div class="paragraph">
-<p>Adds an important task with deadline to the task book<br>
-Format: <code>deadline t/ACTION d/DAY [w/WEEK] [m/MONTH]</code></p>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>deadline t/Complete 2113 Milestone w/1 m/8</code></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="deferring-a-deadline-code-deadline-code"><a class="link" href="#deferring-a-deadline-code-deadline-code">3.7. Deferring a deadline: <code>deadline</code></a></h3>
+<h3 id="deferring-a-deadline-code-deadline-code"><a class="link" href="#deferring-a-deadline-code-deadline-code">3.6. Deferring a deadline: <code>deadline</code></a></h3>
 <div class="paragraph">
 <p>Defers a deadline for a task<br>
 Format: <code>defer [INDEX] de/deadline</code></p>
@@ -220,34 +200,10 @@ Format: <code>defer [INDEX] de/deadline</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="removing-a-deadline-code-remove_deadline-code"><a class="link" href="#removing-a-deadline-code-remove_deadline-code">3.8. Removing a deadline : <code>remove_deadline</code></a></h3>
-<div class="paragraph">
-<p>Removes a deadline from an existing task
-Format: <code>remove_deadline t/ACTION d/DAY [w/WEEK] [m/MONTH]</code></p>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>remove_deadline t/Complete 2113 Milestone w/1 m/8</code></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="viewing-today-s-date-code-view-code"><a class="link" href="#viewing-today-s-date-code-view-code">3.9. Viewing today&#8217;s date : <code>view</code></a></h3>
-<div class="paragraph">
-<p>Shows the date today.<br>
-Format: <code>view</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="selecting-a-date-code-select-code"><a class="link" href="#selecting-a-date-code-select-code">3.10. Selecting a date: <code>select</code></a></h3>
+<h3 id="selecting-a-date-code-select-code"><a class="link" href="#selecting-a-date-code-select-code">3.7. Selecting a date: <code>select</code></a></h3>
 <div class="paragraph">
 <p>Chooses a particular date.<br>
-Format: <code>select d/DAY [w/WEEK] [m/MONTH]</code></p>
+Format: <code>select dd/DAY [mm/MONTH] [yyyy/YEAR]</code></p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -255,16 +211,19 @@ Format: <code>select d/DAY [w/WEEK] [m/MONTH]</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>select d/Mon</code></p>
+<p><code>select dd/1</code></p>
 </li>
 <li>
-<p><code>select d/Mon w/2 m/1</code></p>
+<p><code>select dd/1 mm/1</code></p>
+</li>
+<li>
+<p><code>select dd/1 mm/1 yyyy/2018</code></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.11. Listing entered commands : <code>history</code></a></h3>
+<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.8. Listing entered commands : <code>history</code></a></h3>
 <div class="paragraph">
 <p>Lists all the commands that you have entered in reverse chronological order.<br>
 Format: <code>history</code></p>
@@ -285,7 +244,7 @@ Format: <code>history</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">3.12. Undoing previous command : <code>undo</code></a></h3>
+<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">3.9. Undoing previous command : <code>undo</code></a></h3>
 <div class="paragraph">
 <p>Restores the address book to the state before the previous <em>undoable</em> command was executed.<br>
 Format: <code>undo</code></p>
@@ -330,7 +289,7 @@ The <code>undo</code> command fails as there are no undoable commands executed p
 </div>
 </div>
 <div class="sect2">
-<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">3.13. Redoing the previously undone command : <code>redo</code></a></h3>
+<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">3.10. Redoing the previously undone command : <code>redo</code></a></h3>
 <div class="paragraph">
 <p>Reverses the most recent <code>undo</code> command.<br>
 Format: <code>redo</code></p>
@@ -362,28 +321,28 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 </div>
 </div>
 <div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.14. Clearing all entries : <code>clear</code></a></h3>
+<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.11. Clearing all entries : <code>clear</code></a></h3>
 <div class="paragraph">
 <p>Clears all entries from the address book.<br>
 Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.15. Exiting the program : <code>exit</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.12. Exiting the program : <code>exit</code></a></h3>
 <div class="paragraph">
 <p>Exits the program.<br>
 Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.16. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.13. Saving the data</a></h3>
 <div class="paragraph">
 <p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.17. Encrypting data files <code>[coming in v2.0]</code></a></h3>
+<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.14. Encrypting data files <code>[coming in v2.0]</code></a></h3>
 <div class="paragraph">
 <p><em>{explain how the user can enable/disable data encryption}</em></p>
 </div>
@@ -413,10 +372,7 @@ e.g. <code>add t/Complete 2113 Tutorial d/Wed w/2</code></p>
 e.g. <code>add_milestone t/Complete CS2113 W8 LO m/Complete Sections 8.1 to 8.5 r/1</code></p>
 </li>
 <li>
-<p><strong>Clear</strong> : <code>clear</code></p>
-</li>
-<li>
-<p><strong>Deadline</strong> : <code>deadline t/ACTION d/DAY [w/WEEK] [m/MONTH]&#8230;&#8203;</code><br>
+<p><strong>Clear</strong> : <code>clear</code>
 e.g. <code>deadline t/Complete 2113 Tutorial d/Wed w/2</code></p>
 </li>
 <li>
@@ -433,8 +389,8 @@ e.g. <code>defer_deadline t/Complete 2113 Tutorial w/1</code></p>
 <p><strong>History</strong> : <code>history</code></p>
 </li>
 <li>
-<p><strong>Select</strong> : <code>select d/DAY [w/WEEK] [m/MONTH]</code><br>
-e.g. <code>select d/Mon w/2 m/1</code></p>
+<p><strong>Select</strong> : <code>select dd/DAY [mm/MONTH] [yyyy/YEAR]</code><br>
+e.g. <code>select dd/1 mm/1 yyyy/2018</code></p>
 </li>
 <li>
 <p><strong>Undo</strong> : <code>undo</code></p>
@@ -442,14 +398,7 @@ e.g. <code>select d/Mon w/2 m/1</code></p>
 <li>
 <p><strong>Redo</strong> : <code>redo</code></p>
 </li>
-<li>
-<p><strong>Remove Deadline</strong> : <code>remove_deadline t\ACTION d\DAY [w\WEEK] [m\MONTH]&#8230;&#8203;</code><br>
-e.g. <code>remove_deadline t\Complete 2113 Tutorial d\Wed w\2</code></p>
-</li>
-<li>
-<p><strong>View</strong> : <code>view</code></p>
-</li>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-23 09:17:29 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-24 10:20:14 UTC</div></div></div></body></html>
