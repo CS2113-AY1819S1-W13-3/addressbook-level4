@@ -14,22 +14,23 @@
 <li><a href="#Features">3. Features</a>
 <ul class="sectlevel2">
 <li><a href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></li>
-<li><a href="#adding-a-task-code-add-code">3.2. Adding a task: <code>add</code></a></li>
-<li><a href="#adding-a-milestone-code-add_milestone-code">3.3. Adding a milestone: <code>add_milestone</code></a></li>
+<li><a href="#selecting-a-date-code-select-code">3.2. Selecting a date: <code>select</code></a></li>
+<li><a href="#adding-a-task-code-add-code">3.3. Adding a task: <code>add</code></a></li>
 <li><a href="#complete-a-task-code-complete-code">3.4. Complete a task: <code>complete</code></a></li>
-<li><a href="#sort-the-taskbook-code-sort-code">3.5. Sort the taskbook: <code>sort</code></a></li>
-<li><a href="#deferring-a-deadline-code-defer-code">3.6. Deferring a deadline: <code>defer</code></a></li>
-<li><a href="#delete-a-task-code-delete-code">3.7. Delete a task : <code>delete</code></a></li>
-<li><a href="#selecting-a-date-code-select-code">3.8. Selecting a date: <code>select</code></a></li>
-<li><a href="#editing-a-task-code-edit-code">3.9. Editing a task: <code>edit</code></a></li>
+<li><a href="#delete-a-task-code-delete-code">3.5. Delete a task : <code>delete</code></a></li>
+<li><a href="#sort-the-taskbook-code-sort-code">3.6. Sort the taskbook: <code>sort</code></a></li>
+<li><a href="#deferring-a-deadline-code-defer-code">3.7. Deferring a deadline: <code>defer</code></a></li>
+<li><a href="#editing-a-task-code-edit-code">3.8. Editing a task: <code>edit</code></a></li>
+<li><a href="#adding-a-milestone-code-add_milestone-code">3.9. Adding a milestone: <code>add_milestone</code></a></li>
 <li><a href="#tracking-productivity-code-track-code">3.10. Tracking productivity : <code>track</code></a></li>
-<li><a href="#listing-entered-commands-code-history-code">3.11. Listing entered commands : <code>history</code></a></li>
-<li><a href="#undoing-previous-command-code-undo-code">3.12. Undoing previous command : <code>undo</code></a></li>
-<li><a href="#redoing-the-previously-undone-command-code-redo-code">3.13. Redoing the previously undone command : <code>redo</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">3.14. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">3.15. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">3.16. Saving the data</a></li>
-<li><a href="#checking-off-completed-milestones-code-coming-in-v2-0-code">3.17. Checking off completed milestones <code>[coming in v2.0]</code></a></li>
+<li><a href="#listing-all-existing-tasks-code-list-code">3.11. Listing all existing Tasks : <code>list</code></a></li>
+<li><a href="#listing-entered-commands-code-history-code">3.12. Listing entered commands : <code>history</code></a></li>
+<li><a href="#undoing-previous-command-code-undo-code">3.13. Undoing previous command : <code>undo</code></a></li>
+<li><a href="#redoing-the-previously-undone-command-code-redo-code">3.14. Redoing the previously undone command : <code>redo</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code">3.15. Clearing all entries : <code>clear</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">3.16. Exiting the program : <code>exit</code></a></li>
+<li><a href="#saving-the-data">3.17. Saving the data</a></li>
+<li><a href="#checking-off-completed-milestones-code-coming-in-v2-0-code">3.18. Checking off completed milestones <code>[coming in v2.0]</code></a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -115,10 +116,52 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-a-task-code-add-code"><a class="link" href="#adding-a-task-code-add-code">3.2. Adding a task: <code>add</code></a></h3>
+<h3 id="selecting-a-date-code-select-code"><a class="link" href="#selecting-a-date-code-select-code">3.2. Selecting a date: <code>select</code></a></h3>
+<div class="paragraph">
+<p>Chooses a particular date to be set as the deadline for tasks to be added.<br>
+Format: <code>select dd/DAY mm/MONTH [yyyy/YEAR]</code> or
+<code>select DAY/MONTH[/YEAR]</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A valid year <strong>must</strong> be between 2018 and 9999 (inclusive)</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>select dd/1 mm/1</code></p>
+</li>
+<li>
+<p><code>select 1/1</code></p>
+</li>
+<li>
+<p><code>select dd/1 mm/1 yyyy/2018</code></p>
+</li>
+<li>
+<p><code>select 1/1/2018</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-a-task-code-add-code"><a class="link" href="#adding-a-task-code-add-code">3.3. Adding a task: <code>add</code></a></h3>
 <div class="paragraph">
 <p>Adds a task with its module code, title, description, priority level (low, medium, high) and the number of hours (integers only) expected to complete this task, to the task book<br>
-Format: <code>add c/MODULE_CODE t/TITLE d/DESCRIPTION p/PRIORITY h/HOURS</code></p>
+Format: <code>add c/MODULE_CODE t/TITLE d/DESCRIPTION p/PRIORITY h/HOURS</code>
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; Stashed changes</p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -132,7 +175,133 @@ Format: <code>add c/MODULE_CODE t/TITLE d/DESCRIPTION p/PRIORITY h/HOURS</code><
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-a-milestone-code-add_milestone-code"><a class="link" href="#adding-a-milestone-code-add_milestone-code">3.3. Adding a milestone: <code>add_milestone</code></a></h3>
+<h3 id="complete-a-task-code-complete-code"><a class="link" href="#complete-a-task-code-complete-code">3.4. Complete a task: <code>complete</code></a></h3>
+<div class="paragraph">
+<p>Complete a task in the task book by providing its index and the actual number of hours taken to complete the task<br>
+Format: <code>complete i/INDEX h/HOURS_TO_COMPLETE</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>complete i/1 h/2</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="delete-a-task-code-delete-code"><a class="link" href="#delete-a-task-code-delete-code">3.5. Delete a task : <code>delete</code></a></h3>
+<div class="paragraph">
+<p>Removes a task from the task book
+Format: <code>delete [INDEX]</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete 1</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="sort-the-taskbook-code-sort-code"><a class="link" href="#sort-the-taskbook-code-sort-code">3.6. Sort the taskbook: <code>sort</code></a></h3>
+<div class="paragraph">
+<p>Sort the tasks in the task book via <code>priority</code>, <code>deadlines</code>, <code>modules</code>, or <code>title</code><br>
+Format: <code>sort s/METHOD</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>sort s/priority</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deferring-a-deadline-code-defer-code"><a class="link" href="#deferring-a-deadline-code-defer-code">3.7. Deferring a deadline: <code>defer</code></a></h3>
+<div class="paragraph">
+<p>Defers a deadline for a task<br>
+Format: <code>defer i/INDEX dd/DAY mm/MONTH yyyy/YEAR</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A valid year <em>must</em> be between 2018 and 9999 (inclusive)</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>defer i/1 dd/04 mm/01 yyyy/2018</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-a-task-code-edit-code"><a class="link" href="#editing-a-task-code-edit-code">3.8. Editing a task: <code>edit</code></a></h3>
+<div class="paragraph">
+<p>Edits one or more fields in a selected task.<br>
+Format: <code>edit i/INDEX [t/TITLE] [d/DESCRIPTION] [c/MODULE CODE] [p/PRIORITY] [h/HOURS]</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Index must be present and must be a non-zero positive integer</p>
+</li>
+<li>
+<p>At least one optional field to be edited must be provided</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>edit i/1 t/Complete CS2113 tutorial</code></p>
+</li>
+<li>
+<p><code>edit i/1 d/Edit editTask to fit TaskBook h/4</code></p>
+</li>
+<li>
+<p><code>edit i/1 t/Complete CS2271 tutorial d/Edit editTask to fit TaskBook c/CS2113 p/high h/4</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-a-milestone-code-add_milestone-code"><a class="link" href="#adding-a-milestone-code-add_milestone-code">3.9. Adding a milestone: <code>add_milestone</code></a></h3>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 100%;">
@@ -226,143 +395,6 @@ in the Task Book!
 </div>
 </div>
 <div class="sect2">
-<h3 id="complete-a-task-code-complete-code"><a class="link" href="#complete-a-task-code-complete-code">3.4. Complete a task: <code>complete</code></a></h3>
-<div class="paragraph">
-<p>Complete a task in the task book by providing its index and the actual number of hours taken to complete the task<br>
-Format: <code>complete i/INDEX h/HOURS_TO_COMPLETE</code></p>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>complete i/1 h/2</code></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="sort-the-taskbook-code-sort-code"><a class="link" href="#sort-the-taskbook-code-sort-code">3.5. Sort the taskbook: <code>sort</code></a></h3>
-<div class="paragraph">
-<p>Sort the tasks in the task book via <code>priority</code>, <code>deadlines</code>, <code>modules</code>, or <code>title</code><br>
-Format: <code>sort s/METHOD</code></p>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>sort s/priority</code></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="deferring-a-deadline-code-defer-code"><a class="link" href="#deferring-a-deadline-code-defer-code">3.6. Deferring a deadline: <code>defer</code></a></h3>
-<div class="paragraph">
-<p>Defers a deadline for a task<br>
-Format: <code>defer i/INDEX dd/DAY mm/MONTH yyyy/YEAR</code></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>A valid year <em>must</em> be between 2018 and 9999 (inclusive)</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>defer i/1 dd/04 mm/01 yyyy/2018</code></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="delete-a-task-code-delete-code"><a class="link" href="#delete-a-task-code-delete-code">3.7. Delete a task : <code>delete</code></a></h3>
-<div class="paragraph">
-<p>Removes a task from the task book
-Format: <code>delete [INDEX]</code></p>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>delete 1</code></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="selecting-a-date-code-select-code"><a class="link" href="#selecting-a-date-code-select-code">3.8. Selecting a date: <code>select</code></a></h3>
-<div class="paragraph">
-<p>Chooses a particular date.<br>
-Format: <code>select dd/DAY mm/MONTH yyyy/YEAR</code> or
-<code>select DAY/MONTH/YEAR</code></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>A valid year <em>must</em> be between 2018 and 9999 (inclusive)</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>select dd/1 mm/1 yyyy/2018</code></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="editing-a-task-code-edit-code"><a class="link" href="#editing-a-task-code-edit-code">3.9. Editing a task: <code>edit</code></a></h3>
-<div class="paragraph">
-<p>Edits one or more fields in a selected task.<br>
-Format: <code>edit i/INDEX [t/TITLE] [d/DESCRIPTION] [c/MODULE CODE] [p/PRIORITY] [h/HOURS]</code></p>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>edit i/1 t/Complete CS2113 tutorial</code></p>
-</li>
-<li>
-<p><code>edit i/1 d/Edit editTask to fit TaskBook h/4</code></p>
-</li>
-<li>
-<p><code>edit i/1 t/Complete CS2271 tutorial d/Edit editTask to fit TaskBook c/CS2113 p/high h/4</code></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
 <h3 id="tracking-productivity-code-track-code"><a class="link" href="#tracking-productivity-code-track-code">3.10. Tracking productivity : <code>track</code></a></h3>
 <div class="paragraph">
 <p>Tracks your productivity for all completed tasks, by returning an average productivity (in percentage).<br>
@@ -370,7 +402,14 @@ Format: <code>track</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.11. Listing entered commands : <code>history</code></a></h3>
+<h3 id="listing-all-existing-tasks-code-list-code"><a class="link" href="#listing-all-existing-tasks-code-list-code">3.11. Listing all existing Tasks : <code>list</code></a></h3>
+<div class="paragraph">
+<p>Lists all the existing tasks in task book.<br>
+Format: <code>list</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.12. Listing entered commands : <code>history</code></a></h3>
 <div class="paragraph">
 <p>Lists all the commands that you have entered in reverse chronological order.<br>
 Format: <code>history</code></p>
@@ -391,7 +430,7 @@ Format: <code>history</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">3.12. Undoing previous command : <code>undo</code></a></h3>
+<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">3.13. Undoing previous command : <code>undo</code></a></h3>
 <div class="paragraph">
 <p>Restores the address book to the state before the previous <em>undoable</em> command was executed.<br>
 Format: <code>undo</code></p>
@@ -436,7 +475,7 @@ The <code>undo</code> command fails as there are no undoable commands executed p
 </div>
 </div>
 <div class="sect2">
-<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">3.13. Redoing the previously undone command : <code>redo</code></a></h3>
+<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">3.14. Redoing the previously undone command : <code>redo</code></a></h3>
 <div class="paragraph">
 <p>Reverses the most recent <code>undo</code> command.<br>
 Format: <code>redo</code></p>
@@ -468,28 +507,28 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 </div>
 </div>
 <div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.14. Clearing all entries : <code>clear</code></a></h3>
+<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.15. Clearing all entries : <code>clear</code></a></h3>
 <div class="paragraph">
 <p>Clears all entries from the address book.<br>
 Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.15. Exiting the program : <code>exit</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.16. Exiting the program : <code>exit</code></a></h3>
 <div class="paragraph">
 <p>Exits the program.<br>
 Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.16. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.17. Saving the data</a></h3>
 <div class="paragraph">
 <p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="checking-off-completed-milestones-code-coming-in-v2-0-code"><a class="link" href="#checking-off-completed-milestones-code-coming-in-v2-0-code">3.17. Checking off completed milestones <code>[coming in v2.0]</code></a></h3>
+<h3 id="checking-off-completed-milestones-code-coming-in-v2-0-code"><a class="link" href="#checking-off-completed-milestones-code-coming-in-v2-0-code">3.18. Checking off completed milestones <code>[coming in v2.0]</code></a></h3>
 <div class="paragraph">
 <p>Users will soon be able to strike off (not delete!) their milestones when they have completed them for easier tracking of what they have or have not done!</p>
 </div>
@@ -533,51 +572,48 @@ There is no need to save manually.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Add task</strong> : <code>add c/MODULE_CODE t/ACTION d/DESCRIPTION p/PRIORITY_LEVEL h/HOURS_TO_COMPLETE</code><br>
-e.g. <code>add c/CS2113 t/Complete 2113 Tutorial d/with code done p/high h/2</code></p>
-</li>
-<li>
-<p><strong>Add milestone</strong> : <code>add_milestone i/INDEX m/MILESTONE DESCRIPTION r/RANK&#8230;&#8203;</code><br>
-e.g. <code>add_milestone i/1 m/Q1 - 3 r/1</code></p>
-</li>
-<li>
-<p><strong>Clear</strong> : <code>clear</code></p>
-</li>
-<li>
-<p><strong>Complete</strong> : <code>complete i/INDEX h/HOURS_COMPLETED</code><br>
-e.g. <code>complete i/1 h/2</code></p>
-</li>
-<li>
-<p><strong>Defer deadline</strong> : <code>defer i/INDEX dd/DAY mm/MONTH yyyy/YEAR</code><br>
-e.g. <code>defer i/1 dd/01 mm/01 yyyy/2018</code></p>
-</li>
-<li>
-<p><strong>Delete</strong> : <code>delete INDEX</code>
-e.g. <code>delete 1</code></p>
-</li>
-<li>
-<p><strong>Edit</strong> : 'edit edit i/INDEX [t/TITLE] [d/DESCRIPTION] [c/MODULE CODE] [p/PRIORITY] [h/HOURS]`<br>
-e.g. <code>edit i/1 t/Complete CS2271 tutorial d/Edit editTask to fit TaskBook c/CS2113 p/high h/4</code></p>
-</li>
-<li>
-<p><strong>List</strong> : <code>list</code></p>
-</li>
-<li>
 <p><strong>Help</strong> : <code>help</code></p>
-</li>
-<li>
-<p><strong>History</strong> : <code>history</code></p>
 </li>
 <li>
 <p><strong>Select</strong> : <code>select dd/DAY mm/MONTH yyyy/YEAR</code> or <code>select DAY/MONTH/YEAR</code><br>
 e.g. <code>select dd/1 mm/1 yyyy/2018</code></p>
 </li>
 <li>
-<p><strong>Sort</strong> : <code>sort s/METHOD</code>
-e.g. <code>sort s/priority</code><br></p>
+<p><strong>Add task</strong> : <code>add c/MODULE_CODE t/ACTION d/DESCRIPTION p/PRIORITY_LEVEL h/HOURS_TO_COMPLETE</code><br>
+e.g. <code>add c/CS2113 t/Complete 2113 Tutorial d/with code done p/high h/2</code></p>
+</li>
+<li>
+<p><strong>Complete</strong> : <code>complete i/INDEX h/HOURS_COMPLETED</code><br>
+e.g. <code>complete i/1 h/2</code></p>
+</li>
+<li>
+<p><strong>Delete</strong> : <code>delete INDEX</code>
+e.g. <code>delete 1</code></p>
+</li>
+<li>
+<p><strong>Sort</strong> : <code>sort s/METHOD</code><br>
+e.g. <code>sort s/priority</code></p>
+</li>
+<li>
+<p><strong>Defer deadline</strong> : <code>defer i/INDEX dd/DAY mm/MONTH yyyy/YEAR</code><br>
+e.g. <code>defer i/1 dd/01 mm/01 yyyy/2018</code></p>
+</li>
+<li>
+<p><strong>Edit</strong> : <code>edit i/INDEX [t/TITLE] [d/DESCRIPTION] [c/MODULE CODE] [p/PRIORITY] [h/HOURS]</code><br>
+e.g. <code>edit i/1 t/Complete CS2271 tutorial d/Edit editTask to fit TaskBook c/CS2113 p/high h/4</code></p>
+</li>
+<li>
+<p><strong>Add milestone</strong> : <code>add_milestone i/INDEX m/MILESTONE DESCRIPTION r/RANK&#8230;&#8203;</code><br>
+e.g. <code>add_milestone i/1 m/Q1 - 3 r/1</code></p>
 </li>
 <li>
 <p><strong>Track</strong> : <code>track</code></p>
+</li>
+<li>
+<p><strong>List</strong> : <code>list</code></p>
+</li>
+<li>
+<p><strong>History</strong> : <code>history</code></p>
 </li>
 <li>
 <p><strong>Undo</strong> : <code>undo</code></p>
@@ -585,7 +621,13 @@ e.g. <code>sort s/priority</code><br></p>
 <li>
 <p><strong>Redo</strong> : <code>redo</code></p>
 </li>
+<li>
+<p><strong>Clear</strong> : <code>clear</code></p>
+</li>
+<li>
+<p><strong>Exit</strong> : <code>exit</code></p>
+</li>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-11 08:22:32 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-11 13:32:38 UTC</div></div></div></body></html>

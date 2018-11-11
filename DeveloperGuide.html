@@ -1035,12 +1035,6 @@ b. Require developers to download those libraries manually (this creates extra w
 <td class="tableblock halign-left valign-top"><p class="tableblock">allow for a more flexible schedule when workload becomes too heavy</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">flexible student</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">remove self imposed deadlines</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">shift my priorities to other tasks</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">unorganised student</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">select a date</p></td>
@@ -1067,6 +1061,43 @@ b. Require developers to download those libraries manually (this creates extra w
 <div class="sectionbody">
 <div class="paragraph">
 <p>(For all use cases below, the <strong>System</strong> is the <code>TaskBook</code> and the <strong>Actor</strong> is the <code>student</code>, unless specified otherwise)</p>
+</div>
+<h3 id="use-case-select-a-date" class="discrete">Use case: Select a date</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Student requests to select date required</p>
+</li>
+<li>
+<p>TB checks for its validity and changes to the required date</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1a. Date entered by the student is not valid e.g. dd/29 mm/2 yyyy/2018</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1a1. TB prompts student to enter a correct date</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 <h3 id="use-case-add-new-task" class="discrete">Use case: Add new task</h3>
 <div class="paragraph">
@@ -1115,71 +1146,6 @@ Use case ends.</p>
 <p>3b1. TB outputs an error message</p>
 <div class="paragraph">
 <p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<h3 id="use-case-add-milestone" class="discrete">Use case: Add milestone</h3>
-<div class="paragraph">
-<p><strong>MSS</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Student requests to add a new milestone</p>
-</li>
-<li>
-<p>TB returns a list of tasks entered previously</p>
-</li>
-<li>
-<p>Student selects the task to add the milestone to</p>
-</li>
-<li>
-<p>TB asks for the milestone description and rank</p>
-</li>
-<li>
-<p>Student provides the milestone description and rank</p>
-</li>
-<li>
-<p>TB adds the milestone to the selected task</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>Extensions</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>2a. Task Book is currently empty as no tasks has been added yet.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>2a1. TB outputs error message</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>5a. Student enters an milestone description and rank with invalid format</p>
-<div class="ulist">
-<ul>
-<li>
-<p>5a1. TB requests for milestone description and rank with valid format</p>
-</li>
-<li>
-<p>5a2. Student enters milestone description and rank with valid format</p>
-<div class="paragraph">
-<p>Use case resumes at step 6.</p>
 </div>
 </li>
 </ul>
@@ -1246,17 +1212,17 @@ Use case ends.</p>
 </li>
 </ul>
 </div>
-<h3 id="use-case-edit-task" class="discrete">Use case: Edit task</h3>
+<h3 id="use-case-delete-task" class="discrete">Use case: Delete task</h3>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Student requests to edit a selected task by providing its index and the fields with the values to be updated.</p>
+<p>Student requests to delete a task by providing its index</p>
 </li>
 <li>
-<p>TB checks for validity of the index and updates the fields with the values provided.</p>
+<p>TB removes deadline from the task</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -1269,46 +1235,11 @@ Use case ends.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>1a. Student provided an invalid index</p>
+<p>1a. Student provides an invalid index of the task</p>
 <div class="ulist">
 <ul>
 <li>
-<p>1a1. TB outputs error message</p>
-</li>
-<li>
-<p>1a2. Student enters a new Edit command</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>1b. Student did not provide any field or values to update selected task</p>
-<div class="ulist">
-<ul>
-<li>
-<p>1b1. TB returns an error message</p>
-</li>
-<li>
-<p>1b2. Student enters a new Edit command</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>1b. Values provided by student results in an edited task exactly the same as another existing task</p>
-<div class="ulist">
-<ul>
-<li>
-<p>1b1. TB returns duplicate task info message</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
+<p>1a1. TB outputs an error message</p>
 </li>
 </ul>
 </div>
@@ -1411,17 +1342,17 @@ Use case ends.</p>
 </li>
 </ul>
 </div>
-<h3 id="use-case-delete-task" class="discrete">Use case: Delete task</h3>
+<h3 id="use-case-edit-task" class="discrete">Use case: Edit task</h3>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Student requests to delete a task by providing its index</p>
+<p>Student requests to edit a selected task by providing its index and the fields with the values to be updated.</p>
 </li>
 <li>
-<p>TB removes deadline from the task</p>
+<p>TB checks for validity of the index and updates the fields with the values provided.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -1434,28 +1365,94 @@ Use case ends.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>1a. Student provides an invalid index of the task</p>
+<p>1a. Student provided an invalid index</p>
 <div class="ulist">
 <ul>
 <li>
-<p>1a1. TB outputs an error message</p>
+<p>1a1. TB outputs error message</p>
 </li>
-</ul>
+<li>
+<p>1a2. Student enters a new Edit command</p>
+<div class="paragraph">
+<p>Use case ends.</p>
 </div>
 </li>
 </ul>
 </div>
-<h3 id="use-case-select-a-date" class="discrete">Use case: Select a date</h3>
+</li>
+<li>
+<p>1b. Student did not provide any field or values to update selected task</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1b1. TB returns an error message</p>
+</li>
+<li>
+<p>1b2. Student enters a new Edit command</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>1c. Values provided by student results in the exact same task as before it was edited</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1c1. TB returns no field edited error message</p>
+</li>
+<li>
+<p>1c2. Student enters a new Edit command</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>1d. Values provided by student results in an edited task exactly the same as another existing task</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1d1. TB returns duplicate task info message</p>
+</li>
+<li>
+<p>1d2. Student enters a new Edit command</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-add-milestone" class="discrete">Use case: Add milestone</h3>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Student requests to select date required</p>
+<p>Student requests to add a new milestone</p>
 </li>
 <li>
-<p>TB checks for its validity and changes to the required date</p>
+<p>TB returns a list of tasks entered previously</p>
+</li>
+<li>
+<p>Student selects the task to add the milestone to</p>
+</li>
+<li>
+<p>TB asks for the milestone description and rank</p>
+</li>
+<li>
+<p>Student provides the milestone description and rank</p>
+</li>
+<li>
+<p>TB adds the milestone to the selected task</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -1468,13 +1465,29 @@ Use case ends.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>1a. Date entered by the student is not valid e.g. dd/29 mm/2 yyyy/2018</p>
+<p>2a. Task Book is currently empty as no tasks has been added yet.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>1a1. TB prompts student to enter a correct date</p>
+<p>2a1. TB outputs error message</p>
 <div class="paragraph">
-<p>Use case resumes at step 2.</p>
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>5a. Student enters an milestone description and rank with invalid format</p>
+<div class="ulist">
+<ul>
+<li>
+<p>5a1. TB requests for milestone description and rank with valid format</p>
+</li>
+<li>
+<p>5a2. Student enters milestone description and rank with valid format</p>
+<div class="paragraph">
+<p>Use case resumes at step 6.</p>
 </div>
 </li>
 </ul>
@@ -1637,4 +1650,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-11 08:22:32 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-11 13:32:38 UTC</div></div></div></body></html>
