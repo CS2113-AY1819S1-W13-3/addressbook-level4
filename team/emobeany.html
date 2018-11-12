@@ -10,19 +10,29 @@
 <h2 id="introduction"><a class="link" href="#introduction">Introduction</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This portfolio documents my role and contributions to the CS2113 Software Engineering project.</p>
+<p>This portfolio documents my role and contributions to the CS2113 Software Engineering project in terms of my ability to write functional code, test code and using various platforms such as github effectively.</p>
 </div>
 <div class="paragraph">
-<p>TASK BOOK (TB) is a desktop schedule-managing application for busy students who prefer to use a desktop application to manage and better plan their daily tasks to ultimately lead a more productive life. More importantly, TB is optimized for those who prefer to work with a Command Line Interface (CLI) while still including the benefits of a Graphical User Interface (GUI). TB can help you manage your tasks faster than traditional paper notebooks or mobile calendar applications.</p>
+<p><strong>TASK BOOK</strong> (TB) is a desktop schedule-managing application for busy students who prefer to use a desktop application to manage and better plan their daily tasks to ultimately lead a more productive life. More importantly, TB is optimized for those who prefer to work with a Command Line Interface (CLI) while still including the benefits of a Graphical User Interface (GUI). TB can help you manage your tasks faster than traditional paper notebooks or mobile calendar applications.</p>
 </div>
 <div class="paragraph">
-<p>TB is managed by a dedicated team of 4 members. <strong>Some background info about the project scope and the team?</strong></p>
+<p>TB is managed by a dedicated team of 4 members and we were tasked to morph an existing application into one that fits our defined users and cater to their needs. We worked hard and came up with the <strong>TaskBook</strong> that we are very proud of.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="summary-of-contributions"><a class="link" href="#summary-of-contributions">Summary of contributions</a></h2>
 <div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>This section summarises my contributions to the project, including a range of enhancements, from simple and minor ones to major and more complex enhancements.</em></p></td>
+</tr>
+</tbody>
+</table>
 <div class="ulist">
 <ul>
 <li>
@@ -37,10 +47,10 @@
 <p>What it does: This feature allows the user to choose a date to be set as the deadline for tasks to be added. It filters out invalid dates such as 29 February on common, non-leap years, so that users will not be able to add tasks to non-existing dates.</p>
 </li>
 <li>
-<p>Justification: This allows the user to add multiple tasks with the same deadline to the selected date without having to repeatedly type in the same date.</p>
+<p>Justification: Users may have many tasks that they want to be added to the same deadline. This enhancement allows the user to add multiple tasks to the selected deadline without having to repeatedly type in the same date.</p>
 </li>
 <li>
-<p>Highlights: This enhancement is further improved with the addition of a date picker in the GUI where users can click on the mini calendar to select date without having to use the CLI. This caters to users who prefer to use the GUI to select a date.</p>
+<p>Highlights: To be implemented properly, this enhancement requires the understanding of how different components work together in TaskBook. This enhancement is further improved with the addition of a date picker in the GUI where users can click on the mini calendar to select date without having to use the CLI. This caters to users who prefer to use the GUI to select a date.</p>
 </li>
 </ul>
 </div>
@@ -72,18 +82,31 @@
 </div>
 </li>
 <li>
-<p><strong>Code contributed</strong>: [<a href="https://github.com">Functional code</a>] [<a href="https://github.com">Test code</a>] <em>{give links to collated code files}</em></p>
+<p><strong>Code contributed</strong>: [<a href="https://nuscs2113-ay1819s1.github.io/dashboard/#=undefined&amp;search=emobeany">Functional code/Test code</a>]</p>
 </li>
 <li>
 <p><strong>Other contributions</strong>:</p>
 <div class="ulist">
 <ul>
 <li>
+<p>Documentation:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Adjusted existing contents of the User Guide to make the flow smoother: (Pull request <a href="https://github.com/CS2113-AY1819S1-W13-3/main/pull/115">#115</a>)</p>
+</li>
+<li>
+<p>Added in sections that are relevant to my enhancements: (Pull request <a href="https://github.com/CS2113-AY1819S1-W13-3/main/pull/117">#117</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
 <p>Community:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Reported bugs and suggestions for other teams in the class (examples:)</p>
+<p>Reported bugs and suggestions for other teams in the class: (Issues <a href="https://github.com/CS2113-AY1819S1-T12-3/main/issues/184">#184</a>, <a href="https://github.com/CS2113-AY1819S1-T12-3/main/issues/187">#187</a>, <a href="https://github.com/CS2113-AY1819S1-T12-3/main/issues/190">#190</a>, <a href="https://github.com/CS2113-AY1819S1-T12-3/main/issues/201">#201</a>)</p>
 </li>
 </ul>
 </div>
@@ -104,7 +127,7 @@
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users.</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>This section highlights the documentation I have contributed to the User Guide. They showcase my ability to write documentation targeting end-users to provide simple and effective instructions to help them when using TB.</em></p></td>
 </tr>
 </tbody>
 </table>
@@ -148,6 +171,114 @@ Format: <code>select dd/DAY mm/MONTH [yyyy/YEAR]</code> or
 </li>
 </ul>
 </div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A. Using select command</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>How it should look like:</p>
+</div>
+<div class="paragraph">
+<p>Step 1. Entering <code>select 1/1/2018</code> will select a date as the deadline for tasks to be added. Type the command into the command box as shown below.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/BeforeSelectDeadlineGUI.PNG" alt="BeforeSelectDeadlineGUI" width="800">
+</div>
+<div class="title">Figure 1. GUI before using the select command to select a date</div>
+</div>
+<div class="paragraph">
+<p>Step 2. If you have chosen a valid date, you should be able to see a success message as shown below, highlighted with a red box.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/AfterSelectDeadlineGUI.PNG" alt="AfterSelectDeadlineGUI" width="800">
+</div>
+<div class="title">Figure 2. GUI after using the select command to select a date</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>You have successfully selected a date.</pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B. Using Date Picker</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>How it should look like:</p>
+</div>
+<div class="paragraph">
+<p>Step 1. Alternatively, to make things even simpler, you can choose to use the Date Picker as highlighted below.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/DatePickerPosition.PNG" alt="DatePickerPosition" width="800">
+</div>
+<div class="title">Figure 3. Date Picker beside the command box</div>
+</div>
+<div class="paragraph">
+<p>Step 2. To use the Date Picker, click on the calender icon.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/DatePickerWhereToPress.PNG" alt="DatePickerWhereToPress" width="800">
+</div>
+<div class="title">Figure 4. Calander icon on Date Picker</div>
+</div>
+<div class="paragraph">
+<p>Step 3.  you should be able to see a calendar.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/DatePickerSelectDate.PNG" alt="DatePickerSelectDate" width="800">
+</div>
+<div class="title">Figure 5. Calendar view of Date Picker after clicking on Calendar iocn</div>
+</div>
+<div class="paragraph">
+<p>Step 4. Use the left and right arrows to navigate to different months and years.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/DatePickerLeftRightArrows.PNG" alt="DatePickerLeftRightArrows" width="800">
+</div>
+<div class="title">Figure 6. Left and right arrow keys in Date Picker</div>
+</div>
+<div class="paragraph">
+<p>Step 5. Click on the date you want to select.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/DatePickerSelectDate.PNG" alt="DatePickerSelectDate" width="800">
+</div>
+<div class="title">Figure 7. GUI after using Date Picker to select a date</div>
+</div>
+<div class="paragraph">
+<p>Step 6. A success message will be shown as highlighted below.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/DatePickerSelectDate.PNG" alt="DatePickerSelectDate" width="800">
+</div>
+<div class="title">Figure 8. GUI after using Date Picker to select a date</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>You have successfully selected a date. Good job!</pre>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="editing-a-task-code-edit-code"><a class="link" href="#editing-a-task-code-edit-code">Editing a task: <code>edit</code></a></h3>
@@ -166,6 +297,9 @@ Format: <code>edit i/INDEX [t/TITLE] [d/DESCRIPTION] [c/MODULE CODE] [p/PRIORITY
 <ul>
 <li>
 <p>Index must be present and must be a non-zero positive integer</p>
+</li>
+<li>
+<p>Index selected must exist in the Task Display Panel</p>
 </li>
 <li>
 <p>At least one optional field to be edited must be provided</p>
@@ -192,6 +326,71 @@ Format: <code>edit i/INDEX [t/TITLE] [d/DESCRIPTION] [c/MODULE CODE] [p/PRIORITY
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>How it should look like:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Entering the <code>edit i/1 t/Complete CS2113 tutorial</code> command will edit the title of the first task on the Task Display Panel to 'Complete CS2113 tutorial'. Type the command into the Command Box as shown below.</p>
+<div class="literalblock">
+<div class="content">
+<pre>As you can see, the current title of the first task (highlighted with a red box) is 'COMPLETE CODE REFACTORING'.</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/EditCommandBefore.PNG" alt="EditCommandBefore" width="800">
+</div>
+<div class="title">Figure 9. GUI before using edit command to change the title_</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>After entering a valid command, you should see that the title of the first task has been edited to 'Complete CS2113 tutorial' and also a success message as highlighted below.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/EditCommandAfter.PNG" alt="EditCommandAfter" width="800">
+</div>
+<div class="title">Figure 10. GUI after using edit command to change the title</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You have successfully edited the title of the task. Well done!</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Future releases v2.0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="real-time-synchronisation-with-calendar-code-coming-in-v2-0-code"><a class="link" href="#real-time-synchronisation-with-calendar-code-coming-in-v2-0-code">Real time synchronisation with calendar <code>[coming in v2.0]</code></a></h3>
+<div class="paragraph">
+<p>TaskBook will be able to synchronise with the calendar in real time so that functionalities
+that require real time date tracking can be introduced.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="setting-reminders-code-coming-in-v2-0-code"><a class="link" href="#setting-reminders-code-coming-in-v2-0-code">Setting reminders <code>[coming in v2.0]</code></a></h3>
+<div class="paragraph">
+<p>Users will be able to set reminders that can be triggered a few days before the actual deadline
+to remind them that a task has to be completed.</p>
+</div>
 </div>
 </div>
 </div>
@@ -204,7 +403,7 @@ Format: <code>edit i/INDEX [t/TITLE] [d/DESCRIPTION] [c/MODULE CODE] [p/PRIORITY
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project.</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>This section highlights the technical documentation I have contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project as well as provide sufficient details for future developers to maintain TaskBook.</em></p></td>
 </tr>
 </tbody>
 </table>
@@ -244,6 +443,125 @@ Format: <code>edit i/INDEX [t/TITLE] [d/DESCRIPTION] [c/MODULE CODE] [p/PRIORITY
 </div>
 </li>
 </ul>
+</div>
+<div class="sect2">
+<h3 id="select-deadline-feature"><a class="link" href="#select-deadline-feature">Select Deadline feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation"><a class="link" href="#current-implementation">Current Implementation</a></h4>
+<div class="paragraph">
+<p>The <code>select</code> mechanism is facilitated by <code>VersionedTaskBook</code>. The <code>edit</code> command takes in a date either in the <code>String</code> dd/mm/yyyy format or prefixes with the corresponding values. Input by the user is checked to ensure it conforms to the expected format as it goes through the <code>SelectDeadlineCommandParser.java</code> and <code>TaskBookParser.java</code>. A new <code>SelectDeadlineCommand</code> object is returned and the <code>execute</code> method will run. The date specified will be set as the deadline through <code>model.selectDeadline</code> before a success message is generated to indicate that the <code>select</code> command has been successfully executed and the deadline has been selected.
+Additionally, it implements the following operations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>VersionedTaskBook#selectDeadline()</code> - Selects date to be set as deadline</p>
+</li>
+<li>
+<p><code>Model#updateFilteredTaskList()</code> — Updates the current list of Tasks that is being displayed to the user to show only tasks with the same deadline</p>
+</li>
+<li>
+<p><code>indicateTaskBookChanged()</code> — Event raised to indicate that the TaskBook in the model has changed.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These operations are exposed in the <code>Model</code> interface as <code>Model#selectDeadline()</code>, <code>Model#updateFilteredTaskList()</code> and <code>Model#commitTaskBook()</code> respectively.</p>
+</div>
+<div class="paragraph">
+<p>Given below is an example usage scenario and how the <code>select</code> mechanism behaves are each step.</p>
+</div>
+<div class="paragraph">
+<p>Step 1. The user launches the application. If it is the first time he/she is launching it, the <code>VersionedTaskBook</code> will be initialized with a sample task book data. If the user has already launched it previously and made changes to it, the <code>VersionedTaskBook</code> launched will contain the data that he/she has entered in the previous launch.</p>
+</div>
+<div class="paragraph">
+<p>Step 2. The user executes <code>select 1/1/2018</code> or <code>select dd/1 mm/1 yyyy/2018</code> to select the deadline.</p>
+</div>
+<div class="paragraph">
+<p>Step 3. The <code>select</code> command will call <code>Model#selectDeadline()</code> and select the deadline as 1/1/2018. <code>Model#updateFilteredTaskList()</code> will be called to update the list that is being shown to the user with only show tasks with 1/1/2018 as the deadline.</p>
+</div>
+<div class="paragraph">
+<p>Step 4. Lastly, <code>Model#commitTaskBook()</code> will be called to update the <code>TaskBookStateList</code> and <code>currentStatePointer</code>.</p>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram illustrates how the <code>select</code> command is implemented.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/SelectDeadline.PNG" alt="SelectDeadline" width="”800”">
+</div>
+<div class="title">Figure 11. Sequence diagram for <code>select</code> command</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">Design considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-format-for-selection-of-date"><a class="link" href="#aspect-format-for-selection-of-date">Aspect: Format for selection of date</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> Allows users to use string dd/mm/yyyy format</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easy for users to type command as it is more intuitive without the need to type in all the prefixes.</p>
+</li>
+<li>
+<p>Cons: A separate method of parsing has to be created to handle such a format.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Only allow format with prefixes.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: No need for a separate method to handle another format by limiting users to only the format with prefixes.</p>
+</li>
+<li>
+<p>Cons: Users may find it difficult to enter the date since it is less intuitive which might result in multiple failed attempts to do so.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="aspect-method-to-set-deadline"><a class="link" href="#aspect-method-to-set-deadline">Aspect: Method to set deadline</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> Deadline is selected by a separate <code>Select</code> deadline function.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Allows users to add multiple tasks to the same deadline without having to type the deadline over and over again. Also allows a <code>filteredTaskList</code> based on deadline to be shown to users for them to see how many tasks are currently added to the current deadline.</p>
+</li>
+<li>
+<p>Cons: A separate function has to be created to select the date.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2: </strong>Deadline is selected as a field in the <code>add</code> command.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Separate <code>select</code> function is not required since deadline is set with every <code>add</code> command.</p>
+</li>
+<li>
+<p>Cons: Users have to type the deadline repeatedly if multiple tasks are added to the same deadline. A separate function has to be created to view only tasks that are added to a specific deadline.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="use-case-edit-task"><a class="link" href="#use-case-edit-task">Use case: Edit task</a></h3>
@@ -335,5 +653,125 @@ Format: <code>edit i/INDEX [t/TITLE] [d/DESCRIPTION] [c/MODULE CODE] [p/PRIORITY
 </ul>
 </div>
 </div>
+<div class="sect2">
+<h3 id="edit-task-feature"><a class="link" href="#edit-task-feature">Edit Task feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-2"><a class="link" href="#current-implementation-2">Current Implementation</a></h4>
+<div class="paragraph">
+<p>The <code>edit</code> mechanism is facilitated by <code>VersionedTaskBook</code>. The <code>edit</code> command takes in the index of the task to be edited, followed by prefixes and its corresponding new values which will replace existing values in the task to be edited. Input by the user is checked to ensure it conforms to the expected format as it goes through <code>EditTaskCommandParser.java</code> and <code>TaskBookParser.java</code>. A <code>EditTaskCommand</code> object is returned and the <code>execute</code> method will run. The validity of the index given by the user is checked and the task to be edited is retrieved from <code>model.getFilteredTaskList()</code>. A new task <code>editedTask</code> is created with the values to be edited and the task to be edit is updated with the details of the <code>editedTask’ through `model.updateTask</code> and <code>model.updateFilteredTaskList</code> before finally generating a edit task success message to indicate that the command has been successfully executed.
+Additionally, it implements the following operations:</p>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 04:05:51 UTC</div></div></div></body></html>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Model#getFilteredTaskList()</code> — Obtains the current list of Tasks that is being displayed to the user</p>
+</li>
+<li>
+<p><code>VersionedTaskBook#updateTask()</code> — Edits and updates the specified task with the new values.</p>
+</li>
+<li>
+<p><code>indicateTaskBookChanged()</code> — Event raised to indicate that the TaskBook in the model has changed.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These operations are exposed in the <code>Model</code> interface as <code>Model#updateTask()</code>, <code>Model#updateFilteredTaskList()</code> and <code>Model#commitTaskBook()</code> respectively.
+Given below is an example usage scenario and how the <code>edit</code> mechanism behaves at each step.</p>
+</div>
+<div class="paragraph">
+<p>Step 1. The user launches the application. If it is the first time he/she is launching it, the <code>VersionedTaskBook</code> will be initialized with a sample task book data. If the user has already launched it previously and made changes to it, the <code>VersionedTaskBook</code> launched will contain the data that he/she has entered in the previous launch.</p>
+</div>
+<div class="paragraph">
+<p>Step 2. The user executes <code>edit i/1 t/Complete CS2113 tutorial</code> to edit the title of the existing task at index 1 in the list. The <code>edit</code> command obtains the data of the task that the user wants to change based on the input index.</p>
+</div>
+<div class="paragraph">
+<p>Step 3. The <code>edit</code> command will retrieve and copy the details of the task at index 1 to a new task <code>editedTask</code> and edit the title to <code>Complete CS2113 tutorial</code>.</p>
+</div>
+<div class="paragraph">
+<p>Step 4. The <code>edit</code> command will call <code>Model#updateTask()</code> and update the task at index 1 with the details of <code>editedTask</code>. Also, <code>Model#updateFilteredTaskList()</code> will be called to update the list that is being shown to the user with the updated task.</p>
+</div>
+<div class="paragraph">
+<p>Step 5. Lastly, <code>Model#commitTaskBook()</code> will be called to update the <code>TaskBookStateList</code> and <code>currentStatePointer</code>.</p>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram illustrates how the <code>edit</code> command is implemented.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/EditTaskSequenceDiagram.PNG" alt="EditTaskSequenceDiagram" width="”800”">
+</div>
+<div class="title">Figure 12. Sequence diagram for <code>edit</code> command</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">Design considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-how-to-edit-different-fields-of-a-task"><a class="link" href="#aspect-how-to-edit-different-fields-of-a-task">Aspect: How to edit different fields of a task</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> Allows users to specify which fields they want to change using <code>Prefix</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Users can change more than one fields at a time.</p>
+</li>
+<li>
+<p>Cons: Command might be longer and harder for users to type.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Have individual functions for editing every field</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easy to implement.</p>
+</li>
+<li>
+<p>Cons: Too many different commands for the users to handle.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="aspect-choosing-a-task-to-edit"><a class="link" href="#aspect-choosing-a-task-to-edit">Aspect: Choosing a task to edit</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> Choose a <code>Task</code> based on <code>Index</code> from the <code>filteredTaskList</code>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easy to implement since Index is already implemented in TaskBook.</p>
+</li>
+<li>
+<p>Cons: Users have to scroll through the entire list of tasks to find the <code>Task</code> they want to edit. If the current <code>filteredTaskList</code> shown to them does not contain the task they want to edit, they have to use the ‘List’ command first, resulting in a even longer list of tasks to filter.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Choose a <code>Task</code> by a find command</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Users do not have to scroll through long task lists to find the task they want to edit.</p>
+</li>
+<li>
+<p>Cons: A separate find command has to be implemented. Since there may be task titles that are similar or even the same, the find command will have to show a <code>filteredTaskList</code> for users to select the task to be edited by index which is similar to the first implementation.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 04:13:05 UTC</div></div></div></body></html>
