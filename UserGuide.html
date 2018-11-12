@@ -35,6 +35,8 @@
 <li><a href="#real-time-synchronisation-with-calendar-code-coming-in-v2-0-code">3.20. Real time synchronisation with calendar <code>[coming in v2.0]</code></a></li>
 <li><a href="#setting-reminders-code-coming-in-v2-0-code">3.21. Setting reminders <code>[coming in v2.0]</code></a></li>
 <li><a href="#checking-off-completed-milestones-code-coming-in-v2-0-code">3.22. Checking off completed milestones <code>[coming in v2.0]</code></a></li>
+<li><a href="#lock-task-book-coming-in-v2-0">3.23. Lock Task Book [coming in v2.0]</a></li>
+<li><a href="#unlock-task-book-coming-in-v2-0">3.24. Unlock Task Book [coming in v2.0]</a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -241,8 +243,44 @@ Format: <code>select dd/DAY mm/MONTH [yyyy/YEAR]</code> or
 <div class="sect2">
 <h3 id="adding-a-task-code-add-code"><a class="link" href="#adding-a-task-code-add-code">3.3. Adding a task: <code>add</code></a></h3>
 <div class="paragraph">
-<p>Adds a task with its module code, title, description, priority level (low, medium, high) and the number of hours (integers only) expected to complete this task, to the task book<br>
-Format: <code>add c/MODULE_CODE t/TITLE d/DESCRIPTION p/PRIORITY h/HOURS</code></p>
+<p>Adds a task with its title, description, priority level (low, medium, high) and the number of hours (positive integers only) expected
+to complete this task, to the Task Book<br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Module code is an optional input.<br></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Tasks with similar deadline, title and module code are considered duplicate.
+If a duplicate task is added, Task Book will give an error message: <code>This task already exists in the task book</code></p>
+</div>
+<div class="paragraph">
+<p>However, if the original task has no module code, you are allowed to add
+a similar task with a new module code.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Format: <code>add t/TITLE d/DESCRIPTION p/PRIORITY h/HOURS [c/MODULE_CODE]</code></p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -250,7 +288,10 @@ Format: <code>add c/MODULE_CODE t/TITLE d/DESCRIPTION p/PRIORITY h/HOURS</code><
 <div class="ulist">
 <ul>
 <li>
-<p><code>add c/CS2113 t/Complete 2113 Tutorial d/with code done p/high h/1</code></p>
+<p><code>add t/Complete 2113 Tutorial d/with code done p/high h/1</code></p>
+</li>
+<li>
+<p><code>add t/Complete 2113 Tutorial d/with code done p/high h/1 c/CS2113</code></p>
 </li>
 </ul>
 </div>
@@ -258,8 +299,34 @@ Format: <code>add c/MODULE_CODE t/TITLE d/DESCRIPTION p/PRIORITY h/HOURS</code><
 <div class="sect2">
 <h3 id="complete-a-task-code-complete-code"><a class="link" href="#complete-a-task-code-complete-code">3.4. Complete a task: <code>complete</code></a></h3>
 <div class="paragraph">
-<p>Complete a task in the task book by providing its index and the actual number of hours taken to complete the task<br>
+<p>Complete a task in the Task Book by providing its index and the actual number of hours taken to complete the task<br>
 Format: <code>complete i/INDEX h/HOURS_TO_COMPLETE</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You are not allowed to complete a task in less than 1 hour!</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+If it takes more than 1 day to complete the task, it is recommended to set milestones for it.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -1026,6 +1093,20 @@ to remind them that a task has to be completed.</p>
 <p>Users will soon be able to strike off (not delete!) their milestones when they have completed them for easier tracking of what they have or have not done!</p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="lock-task-book-coming-in-v2-0"><a class="link" href="#lock-task-book-coming-in-v2-0">3.23. Lock Task Book [coming in v2.0]</a></h3>
+<div class="paragraph">
+<p>Task Book will be password-protected to ward off intruders.<br>
+Format: <code>lock</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unlock-task-book-coming-in-v2-0"><a class="link" href="#unlock-task-book-coming-in-v2-0">3.24. Unlock Task Book [coming in v2.0]</a></h3>
+<div class="paragraph">
+<p>Task Book can be unlocked so that authenticated students can log into the Task Book to access sensitive information.<br>
+Format: <code>unlock PASSWORD</code></p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -1123,4 +1204,4 @@ e.g. <code>add_milestone i/1 m/Q1 - 3 r/1</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 14:34:38 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 15:42:13 UTC</div></div></div></body></html>
