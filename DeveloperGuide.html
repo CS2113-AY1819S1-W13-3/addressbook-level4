@@ -1025,8 +1025,26 @@ b. Require developers to download those libraries manually (this creates extra w
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">organized student</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sort tasks by decreasing importance/categorise in module codes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">complete tasks with more urgent deadlines first/ focus on modules with heavier workloads</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sort the tasks in the order preferred to have a more organised task list</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">complete tasks with more urgent deadlines/ highest priority firsts. View tasks in a list sorted by the lexicographical order of the title or module codes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tidy student</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Add tags to tasks</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">to organise, categorise and identify the tasks easily</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">organized student</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Remove tags to tasks</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">to remove the unsuitable tags that were added previously for better organisation, categorisation and identification of the tasks easily</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">structured student</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select a tag to view</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">shows a list of tasks with the selected tag to help with the planning of work schedule for that type of tasks</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
@@ -1253,16 +1271,13 @@ Use case ends.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Student requests to sort his or her tasks for the day</p>
+<p>Student requests to sort his or her tasks in the lists and provides the sorting method</p>
 </li>
 <li>
-<p>TB asks for the criteria to sort the tasks.</p>
+<p>TB checks for the validity of the sorting method</p>
 </li>
 <li>
-<p>Student returns the method to sort tasks</p>
-</li>
-<li>
-<p>TB checks for its validity and display the sorted task list</p>
+<p>TB displays the sorted tasks list based on the sorting method.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -1275,29 +1290,16 @@ Use case ends.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>1b. Student requested to sort an empty taskbook</p>
+<p>1a. Student provided an invalid sorting method</p>
 <div class="ulist">
 <ul>
 <li>
-<p>1b1. TB outputs an error message</p>
+<p>1a1. TB outputs an error message to request for a valid sorting method</p>
+</li>
+<li>
+<p>1a2. Student returns a new sort sorting method</p>
 <div class="paragraph">
 <p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>3a. Student provided an invalid sorting criteria</p>
-<div class="ulist">
-<ul>
-<li>
-<p>3a1. TB requests for a valid sorting criteria</p>
-</li>
-<li>
-<p>3a2. Student enters a new criteria</p>
-<div class="paragraph">
-<p>Use case resumes at step 4.</p>
 </div>
 </li>
 </ul>
@@ -1312,10 +1314,13 @@ Use case ends.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Student requests to defer deadline for an existing task to a requested date</p>
+<p>Student requests to defer the deadline for an existing task by number of days</p>
 </li>
 <li>
-<p>TB sets the new deadline for the existing task</p>
+<p>TB checks the validity of the index and number of days.</p>
+</li>
+<li>
+<p>TB updates the new deadline for the existing task</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -1650,4 +1655,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-11 15:14:04 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 04:05:51 UTC</div></div></div></body></html>
