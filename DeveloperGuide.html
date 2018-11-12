@@ -33,6 +33,7 @@
 <li><a href="#edit-task-feature">3.2. Edit Task feature</a></li>
 <li><a href="#undo-redo-feature">3.3. Undo/Redo feature</a></li>
 <li><a href="#add-milestone-feature">3.4. Add Milestone feature</a></li>
+<li><a href="#defer-deadline-feature">3.5. Defer Deadline feature</a></li>
 </ul>
 </li>
 <li><a href="#Testing">4. Testing</a>
@@ -1105,6 +1106,98 @@ he/she will enter an <code>index</code> to select an existing <code>Task</code> 
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="defer-deadline-feature"><a class="link" href="#defer-deadline-feature">3.5. Defer Deadline feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-5"><a class="link" href="#current-implementation-5">3.5.1. Current Implementation</a></h4>
+<div class="paragraph">
+<p>The <code>defer deadline</code> mechanism is facilitated by <code>VersionedTaskBook</code>. The <code>defer deadline command</code> takes in the <code>index
+prefix</code> with <code>index</code> of the task to be deferred, followed by the <code>deadline prefix</code> with its corresponding <code>number of days</code>
+which will defer the deadline in the task by the number of days.</p>
+</div>
+<div class="paragraph">
+<p>The index represents the <code>Task</code> in the list from <code>PersonListPanel</code> displayed in the <code>GUI</code>.</p>
+</div>
+<div class="paragraph">
+<p>The validity of the input by the user is checked through the <code>DeferDeadlineCommandParser</code> and <code>TaskBookParser</code>. A
+<code>DeferDeadlineCommand</code> object is returned and the <code>execute()</code> method will be performed. The validity of the index will be
+checked and the task to be deferred is retrieve using the <code>getFilterTaskList()</code> method. A copy of the task will be
+instantiated as deferredTask. The deadline of <code>deferredTask</code> will be deferred by the number of days inputted by the user.
+The validity of the deadline and existence of duplicate tasks will be checked.  Task to be deferred will be updated with
+ <code>deferredTask</code> through <code>updateTask()</code> and <code>updateFiteredTaskList()</code> method in the Model Component.</p>
+</div>
+<div class="paragraph">
+<p>Step 1. The user launches the application. If it is the first time he/she is launching it, the <code>VersionedTaskBook</code> will be
+ initialized with a sample task book data. If the user has already launched it previously and made changes to it, the
+ <code>VersionedTaskBook</code> launched will contain the data that he/she has entered in the previous launch.</p>
+</div>
+<div class="paragraph">
+<p>Step 2. The user executes <code>defer i/1 dd/1</code> to defer the deadline of the selected task at index 1 in the list. The <code>defer</code>
+command obtains the data of the task that the user wants to change based on the input index.</p>
+</div>
+<div class="paragraph">
+<p>Step 3. The <code>defer</code> command will retrieve and copy the details of the task at index 1 and instantiate a new task
+<code>deferredTask</code> and <code>defer the deadline by 1 day</code>.</p>
+</div>
+<div class="paragraph">
+<p>Step 4. The defer command will call <code>Model#updateTask()</code> and update the task at index 1 with the details of <code>deferredTask</code>.
+Also, <code>Model#updateFilteredTaskList()</code> will be called to update the list that is being shown to the user with the updated task.</p>
+</div>
+<div class="paragraph">
+<p>Step 5.  Lastly, <code>Model#commitTaskBook()</code> will be called causing the modified state of the task book after the defer i/1 dd/1 command
+executes to be saved in the  <code>TaskBookStateList</code>, and the <code>currentStatePointer</code> to be updated.</p>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram illustrates how the <code>defer</code> command is implemented.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DeferDeadline_SequenceDiagram.png" alt="DeferDeadline SequenceDiagram" width="790">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-5"><a class="link" href="#design-considerations-5">3.5.2. Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-how-should-the-deadline-of-the-task-be-deferred"><a class="link" href="#aspect-how-should-the-deadline-of-the-task-be-deferred">Aspect: How should the deadline of the task be deferred</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong>  Choose to <code>defer</code> the task based on the <code>number of days required</code> and the
+deadline will be <code>automatically updated</code>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: More <code>user-friendly</code> as it allows user to defer the deadline by the <code>number of days required</code> and the deadline
+will be <code>automatically updated</code> without the user finding the exact deadline through calendar.</p>
+</li>
+<li>
+<p>Cons: More <code>complex</code> implementation of the feature as <code>multiple conditional statements</code> are required to ensure the
+deadline is updated correctly by taking into consideration the <code>features of a calendar</code>. For example, which are the months
+ have 30 or 31 days and how is leap year calculated?</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong>  Choose to <code>defer</code> the task based on the <code>exact date</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: <code>Easy</code> implementation of defer deadline command as just have to change the deadline <code>based on users input</code>.</p>
+</li>
+<li>
+<p>Cons: By allowing users to <code>defer</code> the tasks by entering the <code>exact deadline</code> to defer will result in defer deadline
+command to be <code>similar to edit task</code> as it is simply just editing the task’s deadline by keying in a new deadline.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -1630,19 +1723,16 @@ Use case ends.</p>
 <ul>
 <li>
 <p>1a1. TB outputs an error message to request for a valid sorting method</p>
-</li>
-<li>
-<p>1a2. Student returns a new sort sorting method</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
 <h3 id="use-case-defer-deadlines" class="discrete">Use case: Defer deadlines</h3>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
@@ -1655,7 +1745,7 @@ Use case ends.</p>
 <p>TB checks the validity of the index and number of days.</p>
 </li>
 <li>
-<p>TB updates the new deadline for the existing task</p>
+<p>TB updates and display the new deadline for the existing task</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -1668,7 +1758,17 @@ Use case ends.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>1b. Student wants to defer a deadline for a task without deadline</p>
+<p>1a. Student wants to defer a deadline for an non-existent task</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1a1. TB outputs an error message</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>1b. Student wants to defer to a invalid deadline for the selected task</p>
 <div class="ulist">
 <ul>
 <li>
@@ -1682,7 +1782,173 @@ Use case ends.</p>
 </li>
 </ul>
 </div>
-<h3 id="use-case-edit-task" class="discrete">Use case: Edit task</h3>
+<h3 id="use-case-add-tag" class="discrete">Use case: Add tag</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Student requests to add a new tag and provides the index and the tag</p>
+</li>
+<li>
+<p>TB adds the tag to the selected task</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1a. Student enters an invalid index when list of tasks added is empty</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1a1. TB outputs error message for invalid index</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>1b. Student enters index, tag and rank without all the required prefixes</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1b1. TB outputs error message for invalid format</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>1c. Student enters an invalid tag</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1c1. TB outputs error message for invalid format</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-remove-tag" class="discrete">Use case: remove tag</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Student requests to remove a tag and provides the index and the tag</p>
+</li>
+<li>
+<p>TB removes the tag from the selected task</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong>
+* 1a. Student enters an invalid index when list of tasks added is empty
+** 1a1. TB outputs error message for invalid index</p>
+</div>
+<div class="paragraph">
+<p>+
+Use case ends.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1b. Student enters index, tag and rank without all the required prefixes</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1b1. TB outputs error message for invalid format</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>1c. Student enters an invalid tag</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1c1. TB outputs error message for invalid format</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>1d. Student selected the task that doesn&#8217;t have the tag indicated</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1d1. TB outputs error message for invalid format</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-select-tag" class="discrete">Use case: select tag</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Student requests to display list of task with the selected tag and provides the tag</p>
+</li>
+<li>
+<p>TB removes the tag from the selected task</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1c. Student enters an invalid tag</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1c1. TB outputs error message for invalid format</p>
+<div class="paragraph">
+<p>Use case ends.
+=== Use case: Edit task</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
@@ -2165,4 +2431,4 @@ Expected: Task is not edited. Message of task not edited error is shown.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 13:05:49 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 14:34:38 UTC</div></div></div></body></html>

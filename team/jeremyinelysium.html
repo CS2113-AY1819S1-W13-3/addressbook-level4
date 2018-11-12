@@ -353,7 +353,261 @@ he/she will enter an <code>index</code> to select an existing <code>Task</code> 
 </div>
 </div>
 <div class="sect2">
-<h3 id="use-case-add-milestone"><a class="link" href="#use-case-add-milestone">Use case: Add milestone</a></h3>
+<h3 id="use-case-add-tag"><a class="link" href="#use-case-add-tag">Use case: Add tag</a></h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Student requests to add a new tag and provides the index and the tag</p>
+</li>
+<li>
+<p>TB adds the tag to the selected task</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1a. Student enters an invalid index when list of tasks added is empty</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1a1. TB outputs error message for invalid index</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>1b. Student enters index, tag and rank without all the required prefixes</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1b1. TB outputs error message for invalid format</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>1c. Student enters an invalid tag</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1c1. TB outputs error message for invalid format</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-remove-tag" class="discrete">Use case: remove tag</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Student requests to remove a tag and provides the index and the tag</p>
+</li>
+<li>
+<p>TB removes the tag from the selected task</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong>
+* 1a. Student enters an invalid index when list of tasks added is empty
+** 1a1. TB outputs error message for invalid index</p>
+</div>
+<div class="paragraph">
+<p>+
+Use case ends.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1b. Student enters index, tag and rank without all the required prefixes</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1b1. TB outputs error message for invalid format</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>1c. Student enters an invalid tag</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1c1. TB outputs error message for invalid format</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>1d. Student selected the task that doesn&#8217;t have the tag indicated</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1d1. TB outputs error message for invalid format</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-select-tag" class="discrete">Use case: select tag</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Student requests to display list of task with the selected tag and provides the tag</p>
+</li>
+<li>
+<p>TB removes the tag from the selected task</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1c. Student enters an invalid tag</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1c1. TB outputs error message for invalid format</p>
+<div class="paragraph">
+<p>Use case ends.
+=== Use case: Edit task</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Student requests to edit a selected task by providing its index and the fields with the values to be updated.</p>
+</li>
+<li>
+<p>TB checks for validity of the index and updates the fields with the values provided.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1a. Student provided an invalid index</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1a1. TB outputs error message</p>
+</li>
+<li>
+<p>1a2. Student enters a new Edit command</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>1b. Student did not provide any field or values to update selected task</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1b1. TB returns an error message</p>
+</li>
+<li>
+<p>1b2. Student enters a new Edit command</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>1c. Values provided by student results in the exact same task as before it was edited</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1c1. TB returns no field edited error message</p>
+</li>
+<li>
+<p>1c2. Student enters a new Edit command</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>1d. Values provided by student results in an edited task exactly the same as another existing task</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1d1. TB returns duplicate task info message</p>
+</li>
+<li>
+<p>1d2. Student enters a new Edit command</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-add-milestone" class="discrete">Use case: Add milestone</h3>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
@@ -431,4 +685,322 @@ he/she will enter an <code>index</code> to select an existing <code>Task</code> 
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 13:05:49 UTC</div></div></div></body></html>
+</div>
+<div class="sect1">
+<h2 id="non-functional-requirements"><a class="link" href="#non-functional-requirements">Appendix A: Non Functional Requirements</a></h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Should work on any <a href="#mainstream-os">mainstream OS</a> as long as it has Java <code>9</code> or higher installed.</p>
+</li>
+<li>
+<p>Should be able to respond within 2 seconds.</p>
+</li>
+<li>
+<p>A user with above average typing speed for regular English text (i.e. not code, not system admin commands) should be able to accomplish most of the tasks faster using commands than using the mouse.</p>
+</li>
+<li>
+<p>Will be offered free for students.</p>
+</li>
+<li>
+<p>Not built to contain sensitive information due to lack of password protection.</p>
+</li>
+<li>
+<p>Tasks dated as far as 10 years ago may be difficult to retrieve, unless data is backed up in the cloud storage.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="glossary"><a class="link" href="#glossary">Appendix B: Glossary</a></h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a id="mainstream-os"></a> Mainstream OS</dt>
+<dd>
+<p>Windows, Linux, Unix, OS-X</p>
+</dd>
+<dt class="hdlist1"><a id="private-contact-detail"></a> Private contact detail</dt>
+<dd>
+<p>A contact detail that is not meant to be shared with others</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="instructions-for-manual-testing"><a class="link" href="#instructions-for-manual-testing">Appendix C: Instructions for Manual Testing</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Given below are instructions to test the app manually.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+These instructions only provide a starting point for testers to work on; testers are expected to do more <em>exploratory</em> testing.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="launch-and-shutdown"><a class="link" href="#launch-and-shutdown">Launch and Shutdown</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Initial launch</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Download the jar file and copy into an empty folder</p>
+</li>
+<li>
+<p>Double-click the jar file<br>
+Expected: Shows the GUI with a set of sample contacts. The window size may not be optimum.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Saving window preferences</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Resize the window to an optimum size. Move the window to a different location. Close the window.</p>
+</li>
+<li>
+<p>Re-launch the app by double-clicking the jar file.<br>
+Expected: The most recent window size and location is retained.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><em>{ more test cases &#8230;&#8203; }</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="selecting-a-date-as-a-deadline"><a class="link" href="#selecting-a-date-as-a-deadline">Selecting a date as a deadline</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select a deadline</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test case: <code>select 1</code><br>
+Expected: No deadline selected. Message of invalid command format error is shown.</p>
+</li>
+<li>
+<p>Test case: <code>select dd/1</code><br>
+Expected: No deadline selected. Message of invalid command format error is shown.</p>
+</li>
+<li>
+<p>Prerequisite: Select command has not been called before.<br>
+Test case: <code>select 1/1</code><br>
+Expected: Deadline of 1/1/2018 is selected. Message of select success is shown.</p>
+</li>
+<li>
+<p>Prerequisite: Select command has not been called before.<br>
+Test case: <code>select dd/1 mm/1</code><br>
+Expected: Deadline of 1/1/2018 is selected. Message of select success is shown.</p>
+</li>
+<li>
+<p>Prerequisite: Latest select command selected a deadline with 2020 as year (e.g.1/1/2020)<br>
+Test case: 'select 1/1`<br>
+Expected: Deadline of 1/1/2020 is selected. Message of select success is shown.</p>
+</li>
+<li>
+<p>Prerequisite: Latest select command selected a deadline with 2020 as year (e.g.1/1/2020)<br>
+Test case: 'select dd/1 mm/1`<br>
+Expected: Deadline of 1/1/2020 is selected. Message of select success is shown.</p>
+</li>
+<li>
+<p>Test case: <code>select 1/1/2018</code><br>
+Expected: Deadline of 1/1/2018 is selected. Message of select success is shown.</p>
+</li>
+<li>
+<p>Test case: <code>select dd/1 mm/1 yyyy/2018</code><br>
+Expected: Deadline of 1/1/2018 is selected. Message of select success is shown.</p>
+</li>
+<li>
+<p>Test case: <code>select 29/2/2018</code><br>
+Expected: No deadline selected. Message of invalid date error is shown.</p>
+</li>
+<li>
+<p>Test case: <code>select 1/13/2018</code><br>
+Expected: No deadline selected. Message of invalid date error is shown.</p>
+</li>
+<li>
+<p>Test case: <code>select 1/1/201</code><br>
+Expected: No deadline selected. Message of invalid date error is shown.</p>
+</li>
+<li>
+<p>Test case: <code>select a29/2/2018</code><br>
+Expected: No deadline selected. Message of deadline contains illegal characters error is shown.</p>
+</li>
+<li>
+<p>Test case: <code>select 01/01/02018</code><br>
+Expected: Deadline of 1/1/2018 is selected. Message of select success is shown.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Updated filteredTaskList shown after selecting deadline</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: Multiple tasks in the list with different deadlines. At least one task has the deadline of 1/1/2018.</p>
+</li>
+<li>
+<p>Test case: <code>select 1/1/2018</code><br>
+Expected: Deadline of 1/1/2018 is selected. Filtered task list only shows tasks with deadline of 1/1/2018.</p>
+</li>
+<li>
+<p>Test case: <code>select 29/2/2018</code><br>
+Expected: No deadline selected. Filtered task list will not be updated and will show what is was showing previously.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-task"><a class="link" href="#deleting-a-task">Deleting a task</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Deleting a task while all tasks are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all tasks using the <code>list</code> command. Multiple tasks in the list.</p>
+</li>
+<li>
+<p>Test case: <code>delete 1</code><br>
+Expected: First contact is deleted from the list. Details of the deleted contact shown in the status message. Timestamp in the status bar is updated.</p>
+</li>
+<li>
+<p>Test case: <code>delete 0</code><br>
+Expected: No task is deleted. Error details shown in the status message. Status bar remains the same.</p>
+</li>
+<li>
+<p>Other incorrect delete commands to try: <code>delete</code>, <code>delete x</code> (where x is larger than the list size) <em>{give more}</em><br>
+Expected: Similar to previous.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><em>{ more test cases &#8230;&#8203; }</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-a-task"><a class="link" href="#editing-a-task">Editing a task</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Editing a task while all tasks are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all tasks using <code>list</code> command. Only 3 tasks are in the list.</p>
+</li>
+<li>
+<p>Test case: <code>edit</code><br>
+Expected: Task is not edited. Message of invalid command format is shown.</p>
+</li>
+<li>
+<p>Test case: <code>edit 1</code><br>
+Expected: Task is not edited. Message of invalid command format is shown.</p>
+</li>
+<li>
+<p>Test case: <code>edit t/Do CS2113 tutorial</code><br>
+Expected: Task is not edited. Message of invalid command format is shown.</p>
+</li>
+<li>
+<p>Test case: <code>edit i/</code><br>
+Expected: Task is not edited. Message of empty index is shown.</p>
+</li>
+<li>
+<p>Test case: <code>edit i/1 t/</code><br>
+Expected: Task is not edited. Message of empty title is shown.</p>
+</li>
+<li>
+<p>Test case: <code>edit i/1 d/</code><br>
+Expected: Task is not edited. Message of empty description is shown.</p>
+</li>
+<li>
+<p>Test case: <code>edit i/1 c/</code><br>
+Expected: Task is not edited. Message of empty module code is shown.</p>
+</li>
+<li>
+<p>Test case: <code>edit i/1 p/</code><br>
+Expected: Task is not edited. Message of empty priority level is shown.</p>
+</li>
+<li>
+<p>Test case: <code>edit i/1 h/</code><br>
+Expected: Task is not edited. Message of empty hours is shown.</p>
+</li>
+<li>
+<p>Test case: <code>edit i/0 t/Do CS2113 tutorial</code><br>
+Expected: Task is not edited. Message of invalid index (index must be a non-zero unsigned integer) is shown.</p>
+</li>
+<li>
+<p>Test case: <code>edit i/4 t/Do CS2113 tutorial</code><br>
+Expected: Task is not edited. Message of invalid task displayed index (the task index provided is invalid) is shown.</p>
+</li>
+<li>
+<p>Prerequisites: Tasks in list do not have the exact same fields.<br>
+Test case: <code>edit i/1 t/Do CS2113 tutorial</code><br>
+Expected: Task at index 1 is edited and the original title is replaced by "Do CS2113 tutorial". Message of edit success is shown.</p>
+</li>
+<li>
+<p>Prerequisites: Task at i/1 is exactly the same another existing task, existingTask, except for the title. The title of existingTask is "Do CS2113 tutorial".<br>
+Test case: <code>edit i/1 t/Do CS2113 tutorial</code><br>
+Expected: Task is not edited. Message of duplicate task error is shown.</p>
+</li>
+<li>
+<p>Prerequisites: Task at i/1 has a title of "Do CS2113 tutorial".<br>
+Test case: <code>edit i/1 t/Do CS2113 tutorial</code><br>
+Expected: Task is not edited. Message of task not edited error is shown.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="saving-data"><a class="link" href="#saving-data">Saving data</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Dealing with missing/corrupted data files</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><em>{explain how to simulate a missing/corrupted file and the expected behavior}</em></p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><em>{ more test cases &#8230;&#8203; }</em></p>
+</div>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 14:34:38 UTC</div></div></div></body></html>

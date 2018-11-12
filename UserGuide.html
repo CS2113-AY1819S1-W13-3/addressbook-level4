@@ -18,24 +18,23 @@
 <li><a href="#adding-a-task-code-add-code">3.3. Adding a task: <code>add</code></a></li>
 <li><a href="#complete-a-task-code-complete-code">3.4. Complete a task: <code>complete</code></a></li>
 <li><a href="#delete-a-task-code-delete-code">3.5. Delete a task : <code>delete</code></a></li>
-<li><a href="#sort-the-taskbook-code-sort-code">3.6. Sort the taskbook: <code>sort</code></a></li>
-<li><a href="#deferring-a-deadline-code-defer-code">3.7. Deferring a deadline: <code>defer</code></a></li>
-<li><a href="#editing-a-task-code-edit-code">3.8. Editing a task: <code>edit</code></a></li>
-<li><a href="#adding-a-milestone-code-add_milestone-code">3.9. Adding a milestone: <code>add_milestone</code></a></li>
-<li><a href="#adding-a-tag-code-add_tag-code">3.10. Adding a tag: <code>add_tag</code></a></li>
-<li><a href="#removing-a-tag-code-remove_tag-code">3.11. Removing a tag: <code>remove_tag</code></a></li>
-<li><a href="#selecting-a-tag-code-select_tag-code">3.12. Selecting a tag: <code>select_tag</code></a></li>
-<li><a href="#tracking-productivity-code-track-code">3.13. Tracking productivity : <code>track</code></a></li>
-<li><a href="#listing-all-existing-tasks-code-list-code">3.14. Listing all existing Tasks : <code>list</code></a></li>
-<li><a href="#listing-entered-commands-code-history-code">3.15. Listing entered commands : <code>history</code></a></li>
-<li><a href="#undoing-previous-command-code-undo-code">3.16. Undoing previous command : <code>undo</code></a></li>
-<li><a href="#redoing-the-previously-undone-command-code-redo-code">3.17. Redoing the previously undone command : <code>redo</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">3.18. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">3.19. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">3.20. Saving the data</a></li>
-<li><a href="#real-time-synchronisation-with-calendar-code-coming-in-v2-0-code">3.21. Real time synchronisation with calendar <code>[coming in v2.0]</code></a></li>
-<li><a href="#setting-reminders-code-coming-in-v2-0-code">3.22. Setting reminders <code>[coming in v2.0]</code></a></li>
-<li><a href="#checking-off-completed-milestones-code-coming-in-v2-0-code">3.23. Checking off completed milestones <code>[coming in v2.0]</code></a></li>
+<li><a href="#deferring-a-deadline-code-defer-code">3.6. Deferring a deadline: <code>defer</code></a></li>
+<li><a href="#editing-a-task-code-edit-code">3.7. Editing a task: <code>edit</code></a></li>
+<li><a href="#adding-a-milestone-code-add_milestone-code">3.8. Adding a milestone: <code>add_milestone</code></a></li>
+<li><a href="#adding-a-tag-code-add_tag-code">3.9. Adding a tag: <code>add_tag</code></a></li>
+<li><a href="#removing-a-tag-code-remove_tag-code">3.10. Removing a tag: <code>remove_tag</code></a></li>
+<li><a href="#selecting-a-tag-code-select_tag-code">3.11. Selecting a tag: <code>select_tag</code></a></li>
+<li><a href="#tracking-productivity-code-track-code">3.12. Tracking productivity : <code>track</code></a></li>
+<li><a href="#listing-all-existing-tasks-code-list-code">3.13. Listing all existing Tasks : <code>list</code></a></li>
+<li><a href="#listing-entered-commands-code-history-code">3.14. Listing entered commands : <code>history</code></a></li>
+<li><a href="#undoing-previous-command-code-undo-code">3.15. Undoing previous command : <code>undo</code></a></li>
+<li><a href="#redoing-the-previously-undone-command-code-redo-code">3.16. Redoing the previously undone command : <code>redo</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code">3.17. Clearing all entries : <code>clear</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">3.18. Exiting the program : <code>exit</code></a></li>
+<li><a href="#saving-the-data">3.19. Saving the data</a></li>
+<li><a href="#real-time-synchronisation-with-calendar-code-coming-in-v2-0-code">3.20. Real time synchronisation with calendar <code>[coming in v2.0]</code></a></li>
+<li><a href="#setting-reminders-code-coming-in-v2-0-code">3.21. Setting reminders <code>[coming in v2.0]</code></a></li>
+<li><a href="#checking-off-completed-milestones-code-coming-in-v2-0-code">3.22. Checking off completed milestones <code>[coming in v2.0]</code></a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -285,13 +284,11 @@ Format: <code>delete [INDEX]</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>delete 1</code></p>
+<p><code>delete 1</code>
+=== Sort the taskbook: <code>sort</code></p>
 </li>
 </ul>
 </div>
-</div>
-<div class="sect2">
-<h3 id="sort-the-taskbook-code-sort-code"><a class="link" href="#sort-the-taskbook-code-sort-code">3.6. Sort the taskbook: <code>sort</code></a></h3>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 100%;">
@@ -347,12 +344,12 @@ Format: <code>sort s/METHOD</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>sort s/priority</code></p>
+<p><code>sort s/deadlines</code></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Before</strong></p>
+<p><strong>Before: "sort s/deadlines" is entered</strong></p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -360,7 +357,7 @@ Format: <code>sort s/METHOD</code></p>
 </div>
 </div>
 <div class="paragraph">
-<p><strong>After</strong></p>
+<p><strong>After: The list of tasks is sorted based on ascending order of the deadline</strong></p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -369,7 +366,7 @@ Format: <code>sort s/METHOD</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deferring-a-deadline-code-defer-code"><a class="link" href="#deferring-a-deadline-code-defer-code">3.7. Deferring a deadline: <code>defer</code></a></h3>
+<h3 id="deferring-a-deadline-code-defer-code"><a class="link" href="#deferring-a-deadline-code-defer-code">3.6. Deferring a deadline: <code>defer</code></a></h3>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 100%;">
@@ -392,8 +389,12 @@ Format: <code>defer i/INDEX dd/DAY</code></p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<div class="paragraph">
-<p>A valid year <strong>must</strong> be between 2018 and 9999 (inclusive)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Deadline of the selected task will be automatically updated by the number of days deferred from the deadline</p>
+</li>
+</ul>
 </div>
 </td>
 </tr>
@@ -431,7 +432,7 @@ Format: <code>defer i/INDEX dd/DAY</code></p>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Before</strong></p>
+<p><strong>Before: "defer i/1 dd/1" is entered</strong></p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -439,7 +440,7 @@ Format: <code>defer i/INDEX dd/DAY</code></p>
 </div>
 </div>
 <div class="paragraph">
-<p><strong>After</strong></p>
+<p><strong>After: deadline for the first task is deferred by 1 day</strong></p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -448,7 +449,7 @@ Format: <code>defer i/INDEX dd/DAY</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-a-task-code-edit-code"><a class="link" href="#editing-a-task-code-edit-code">3.8. Editing a task: <code>edit</code></a></h3>
+<h3 id="editing-a-task-code-edit-code"><a class="link" href="#editing-a-task-code-edit-code">3.7. Editing a task: <code>edit</code></a></h3>
 <div class="paragraph">
 <p>Edits one or more fields in a selected task.<br>
 Format: <code>edit i/INDEX [t/TITLE] [d/DESCRIPTION] [c/MODULE CODE] [p/PRIORITY] [h/HOURS]</code></p>
@@ -534,7 +535,7 @@ Format: <code>edit i/INDEX [t/TITLE] [d/DESCRIPTION] [c/MODULE CODE] [p/PRIORITY
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-a-milestone-code-add_milestone-code"><a class="link" href="#adding-a-milestone-code-add_milestone-code">3.9. Adding a milestone: <code>add_milestone</code></a></h3>
+<h3 id="adding-a-milestone-code-add_milestone-code"><a class="link" href="#adding-a-milestone-code-add_milestone-code">3.8. Adding a milestone: <code>add_milestone</code></a></h3>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 100%;">
@@ -625,7 +626,7 @@ in the Task Book!</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-a-tag-code-add_tag-code"><a class="link" href="#adding-a-tag-code-add_tag-code">3.10. Adding a tag: <code>add_tag</code></a></h3>
+<h3 id="adding-a-tag-code-add_tag-code"><a class="link" href="#adding-a-tag-code-add_tag-code">3.9. Adding a tag: <code>add_tag</code></a></h3>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 100%;">
@@ -694,7 +695,7 @@ Format: <code>add_tag i/INDEX t/TAG</code></p>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Before</strong></p>
+<p><strong>Before: "add_tag i/1 t/homework" is entered</strong></p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -702,7 +703,7 @@ Format: <code>add_tag i/INDEX t/TAG</code></p>
 </div>
 </div>
 <div class="paragraph">
-<p><strong>After</strong></p>
+<p><strong>After: The tag "homework" is added to the first task</strong></p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -711,7 +712,7 @@ Format: <code>add_tag i/INDEX t/TAG</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="removing-a-tag-code-remove_tag-code"><a class="link" href="#removing-a-tag-code-remove_tag-code">3.11. Removing a tag: <code>remove_tag</code></a></h3>
+<h3 id="removing-a-tag-code-remove_tag-code"><a class="link" href="#removing-a-tag-code-remove_tag-code">3.10. Removing a tag: <code>remove_tag</code></a></h3>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 100%;">
@@ -776,7 +777,7 @@ Format: <code>remove_tag i/INDEX t/TAG</code></p>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Before</strong></p>
+<p><strong>Before: "remove_tag i/1 t/homework" is entered</strong></p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -784,7 +785,7 @@ Format: <code>remove_tag i/INDEX t/TAG</code></p>
 </div>
 </div>
 <div class="paragraph">
-<p><strong>After</strong></p>
+<p><strong>After: The tag "homework" is removed from the first task</strong></p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -793,7 +794,7 @@ Format: <code>remove_tag i/INDEX t/TAG</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="selecting-a-tag-code-select_tag-code"><a class="link" href="#selecting-a-tag-code-select_tag-code">3.12. Selecting a tag: <code>select_tag</code></a></h3>
+<h3 id="selecting-a-tag-code-select_tag-code"><a class="link" href="#selecting-a-tag-code-select_tag-code">3.11. Selecting a tag: <code>select_tag</code></a></h3>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 100%;">
@@ -856,7 +857,7 @@ Format: <code>select_tag t/TAG</code></p>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Before</strong></p>
+<p><strong>Before: "select_tag t/homework" is entered</strong></p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -864,7 +865,7 @@ Format: <code>select_tag t/TAG</code></p>
 </div>
 </div>
 <div class="paragraph">
-<p><strong>After</strong></p>
+<p><strong>After: A list of tasks with tag "homework" is shown</strong></p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -873,21 +874,21 @@ Format: <code>select_tag t/TAG</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="tracking-productivity-code-track-code"><a class="link" href="#tracking-productivity-code-track-code">3.13. Tracking productivity : <code>track</code></a></h3>
+<h3 id="tracking-productivity-code-track-code"><a class="link" href="#tracking-productivity-code-track-code">3.12. Tracking productivity : <code>track</code></a></h3>
 <div class="paragraph">
 <p>Tracks your productivity for all completed tasks, by returning an average productivity (in percentage).<br>
 Format: <code>track</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-all-existing-tasks-code-list-code"><a class="link" href="#listing-all-existing-tasks-code-list-code">3.14. Listing all existing Tasks : <code>list</code></a></h3>
+<h3 id="listing-all-existing-tasks-code-list-code"><a class="link" href="#listing-all-existing-tasks-code-list-code">3.13. Listing all existing Tasks : <code>list</code></a></h3>
 <div class="paragraph">
 <p>Lists all the existing tasks in task book.<br>
 Format: <code>list</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.15. Listing entered commands : <code>history</code></a></h3>
+<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.14. Listing entered commands : <code>history</code></a></h3>
 <div class="paragraph">
 <p>Lists all the commands that you have entered in reverse chronological order.<br>
 Format: <code>history</code></p>
@@ -908,7 +909,7 @@ Format: <code>history</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">3.16. Undoing previous command : <code>undo</code></a></h3>
+<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">3.15. Undoing previous command : <code>undo</code></a></h3>
 <div class="paragraph">
 <p>Restores the address book to the state before the previous <em>undoable</em> command was executed.<br>
 Format: <code>undo</code></p>
@@ -953,7 +954,7 @@ The <code>undo</code> command fails as there are no undoable commands executed p
 </div>
 </div>
 <div class="sect2">
-<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">3.17. Redoing the previously undone command : <code>redo</code></a></h3>
+<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">3.16. Redoing the previously undone command : <code>redo</code></a></h3>
 <div class="paragraph">
 <p>Reverses the most recent <code>undo</code> command.<br>
 Format: <code>redo</code></p>
@@ -985,42 +986,42 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 </div>
 </div>
 <div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.18. Clearing all entries : <code>clear</code></a></h3>
+<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.17. Clearing all entries : <code>clear</code></a></h3>
 <div class="paragraph">
 <p>Clears all entries from the address book.<br>
 Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.19. Exiting the program : <code>exit</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.18. Exiting the program : <code>exit</code></a></h3>
 <div class="paragraph">
 <p>Exits the program.<br>
 Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.20. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.19. Saving the data</a></h3>
 <div class="paragraph">
 <p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="real-time-synchronisation-with-calendar-code-coming-in-v2-0-code"><a class="link" href="#real-time-synchronisation-with-calendar-code-coming-in-v2-0-code">3.21. Real time synchronisation with calendar <code>[coming in v2.0]</code></a></h3>
+<h3 id="real-time-synchronisation-with-calendar-code-coming-in-v2-0-code"><a class="link" href="#real-time-synchronisation-with-calendar-code-coming-in-v2-0-code">3.20. Real time synchronisation with calendar <code>[coming in v2.0]</code></a></h3>
 <div class="paragraph">
 <p>TaskBook will be able to synchronise with the calendar in real time so that functionalities
 that require real time date tracking can be introduced.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="setting-reminders-code-coming-in-v2-0-code"><a class="link" href="#setting-reminders-code-coming-in-v2-0-code">3.22. Setting reminders <code>[coming in v2.0]</code></a></h3>
+<h3 id="setting-reminders-code-coming-in-v2-0-code"><a class="link" href="#setting-reminders-code-coming-in-v2-0-code">3.21. Setting reminders <code>[coming in v2.0]</code></a></h3>
 <div class="paragraph">
 <p>Users will be able to set reminders that can be triggered a few days before the actual deadline
 to remind them that a task has to be completed.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="checking-off-completed-milestones-code-coming-in-v2-0-code"><a class="link" href="#checking-off-completed-milestones-code-coming-in-v2-0-code">3.23. Checking off completed milestones <code>[coming in v2.0]</code></a></h3>
+<h3 id="checking-off-completed-milestones-code-coming-in-v2-0-code"><a class="link" href="#checking-off-completed-milestones-code-coming-in-v2-0-code">3.22. Checking off completed milestones <code>[coming in v2.0]</code></a></h3>
 <div class="paragraph">
 <p>Users will soon be able to strike off (not delete!) their milestones when they have completed them for easier tracking of what they have or have not done!</p>
 </div>
@@ -1122,4 +1123,4 @@ e.g. <code>add_milestone i/1 m/Q1 - 3 r/1</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 13:05:49 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 14:34:38 UTC</div></div></div></body></html>
