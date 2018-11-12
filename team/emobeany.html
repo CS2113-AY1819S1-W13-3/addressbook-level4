@@ -29,7 +29,7 @@
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>This section summarises my contributions to the project, including a range of enhancements, from simple and minor ones to major and more complex enhancements.</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>This section summarises my contributions to the project, including major and minor enhancements to features in TB as well as other contributions made.</em></p></td>
 </tr>
 </tbody>
 </table>
@@ -63,12 +63,9 @@
 <div class="ulist">
 <ul>
 <li>
-<p>1)   Added the ability for TB to filter tasks added based on their deadlines when users select a date.</p>
+<p>Added the ability for TB to filter tasks added based on their deadlines when users select a date.</p>
 <div class="ulist">
 <ul>
-<li>
-<p>What it does: This feature allows TB to only show tasks that have the selected date as their deadline in the task panel of the GUI.</p>
-</li>
 <li>
 <p>Justification: This allows users to view how many tasks with the same deadline have already been added and possibly defer the deadline of some less important tasks.</p>
 </li>
@@ -76,7 +73,7 @@
 </div>
 </li>
 <li>
-<p>2)	Modified the edit command to fit the use of TB where task details can be edited by the user.</p>
+<p>Modified the edit command to fit the use of TB where task details can be edited by the user.</p>
 </li>
 </ul>
 </div>
@@ -106,7 +103,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Reported bugs and suggestions for other teams in the class: (Issues <a href="https://github.com/CS2113-AY1819S1-T12-3/main/issues/184">#184</a>, <a href="https://github.com/CS2113-AY1819S1-T12-3/main/issues/187">#187</a>, <a href="https://github.com/CS2113-AY1819S1-T12-3/main/issues/190">#190</a>, <a href="https://github.com/CS2113-AY1819S1-T12-3/main/issues/201">#201</a>)</p>
+<p>Reported bugs and suggestions for other teams in the class: (Issues <a href="https://github.com/CS2113-AY1819S1-T12-3/main/issues/184">#184</a>, <a href="https://github.com/CS2113-AY1819S1-T12-3/main/issues/190">#190</a>, <a href="https://github.com/CS2113-AY1819S1-T12-3/main/issues/201">#201</a>)</p>
 </li>
 </ul>
 </div>
@@ -172,14 +169,11 @@ Format: <code>select dd/DAY mm/MONTH [yyyy/YEAR]</code> or
 </ul>
 </div>
 <table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A. Using select command</p></td>
-</tr>
-</tbody>
+</table>
+<div class="paragraph">
+<p><strong>A. Using select command</strong></p>
+</div>
+<table class="tableblock frame-all grid-all spread">
 </table>
 <div class="paragraph">
 <p>How it should look like:</p>
@@ -189,7 +183,7 @@ Format: <code>select dd/DAY mm/MONTH [yyyy/YEAR]</code> or
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/BeforeSelectDeadlineGUI.PNG" alt="BeforeSelectDeadlineGUI" width="800">
+<img src="../images/BeforeSelectDeadlineGUI.PNG" alt="BeforeSelectDeadlineGUI" width="600">
 </div>
 <div class="title">Figure 1. GUI before using the select command to select a date</div>
 </div>
@@ -198,81 +192,54 @@ Format: <code>select dd/DAY mm/MONTH [yyyy/YEAR]</code> or
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/AfterSelectDeadlineGUI.PNG" alt="AfterSelectDeadlineGUI" width="800">
+<img src="../images/AfterSelectDeadlineGUI.PNG" alt="AfterSelectDeadlineGUI" width="600">
 </div>
 <div class="title">Figure 2. GUI after using the select command to select a date</div>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>You have successfully selected a date.</pre>
+<pre>You have successfully selected a date. Nice!</pre>
 </div>
 </div>
 <table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">B. Using Date Picker</p></td>
-</tr>
-</tbody>
+</table>
+<div class="paragraph">
+<p><strong>B. Using Date Picker</strong></p>
+</div>
+<table class="tableblock frame-all grid-all spread">
 </table>
 <div class="paragraph">
 <p>How it should look like:</p>
 </div>
 <div class="paragraph">
-<p>Step 1. Alternatively, to make things even simpler, you can choose to use the Date Picker as highlighted below.</p>
+<p>Step 1. Alternatively, to make things even simpler, you can choose to use the Date Picker as highlighted below. To use the Date Picker, click on the calender icon.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/DatePickerPosition.PNG" alt="DatePickerPosition" width="800">
+<img src="../images/DatePickerWhereToPress.PNG" alt="DatePickerWhereToPress" width="600">
 </div>
-<div class="title">Figure 3. Date Picker beside the command box</div>
+<div class="title">Figure 3. Calander icon on Date Picker</div>
 </div>
 <div class="paragraph">
-<p>Step 2. To use the Date Picker, click on the calender icon.</p>
+<p>Step 3.  After clicking on the icon, you should be able to see a calendar. Use the left and right arrows to navigate to different months and years.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/DatePickerWhereToPress.PNG" alt="DatePickerWhereToPress" width="800">
+<img src="../images/DatePickerLeftRightArrows.PNG" alt="DatePickerLeftRightArrows" width="600">
 </div>
-<div class="title">Figure 4. Calander icon on Date Picker</div>
-</div>
-<div class="paragraph">
-<p>Step 3.  you should be able to see a calendar.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/DatePickerSelectDate.PNG" alt="DatePickerSelectDate" width="800">
-</div>
-<div class="title">Figure 5. Calendar view of Date Picker after clicking on Calendar iocn</div>
-</div>
-<div class="paragraph">
-<p>Step 4. Use the left and right arrows to navigate to different months and years.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/DatePickerLeftRightArrows.PNG" alt="DatePickerLeftRightArrows" width="800">
-</div>
-<div class="title">Figure 6. Left and right arrow keys in Date Picker</div>
+<div class="title">Figure 4. Left and right arrow keys in Date Picker</div>
 </div>
 <div class="paragraph">
 <p>Step 5. Click on the date you want to select.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/DatePickerSelectDate.PNG" alt="DatePickerSelectDate" width="800">
+<img src="../images/DatePickerSelectDate.PNG" alt="DatePickerSelectDate" width="600">
 </div>
-<div class="title">Figure 7. GUI after using Date Picker to select a date</div>
+<div class="title">Figure 5. GUI after using Date Picker to select a date</div>
 </div>
 <div class="paragraph">
-<p>Step 6. A success message will be shown as highlighted below.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/DatePickerSelectDate.PNG" alt="DatePickerSelectDate" width="800">
-</div>
-<div class="title">Figure 8. GUI after using Date Picker to select a date</div>
+<p>Step 6. A success message will be shown (refer to Figure 2).</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -286,11 +253,11 @@ Format: <code>select dd/DAY mm/MONTH [yyyy/YEAR]</code> or
 <p>Edits one or more fields in a selected task.<br>
 Format: <code>edit i/INDEX [t/TITLE] [d/DESCRIPTION] [c/MODULE CODE] [p/PRIORITY] [h/HOURS]</code></p>
 </div>
-<div class="admonitionblock note">
+<div class="admonitionblock warning">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
 <div class="ulist">
@@ -343,9 +310,9 @@ Format: <code>edit i/INDEX [t/TITLE] [d/DESCRIPTION] [c/MODULE CODE] [p/PRIORITY
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/EditCommandBefore.PNG" alt="EditCommandBefore" width="800">
+<img src="../images/EditCommandBefore.PNG" alt="EditCommandBefore" width="600">
 </div>
-<div class="title">Figure 9. GUI before using edit command to change the title_</div>
+<div class="title">Figure 6. GUI before using edit command to change the title</div>
 </div>
 <div class="ulist">
 <ul>
@@ -356,27 +323,19 @@ Format: <code>edit i/INDEX [t/TITLE] [d/DESCRIPTION] [c/MODULE CODE] [p/PRIORITY
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/EditCommandAfter.PNG" alt="EditCommandAfter" width="800">
+<img src="../images/EditCommandAfter.PNG" alt="EditCommandAfter" width="600">
 </div>
-<div class="title">Figure 10. GUI after using edit command to change the title</div>
+<div class="title">Figure 7. GUI after using edit command to change the title</div>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>You have successfully edited the title of the task. Well done!</p>
-</li>
-</ul>
+<div class="literalblock">
+<div class="content">
+<pre>You have successfully edited the title of the task. Well done!</pre>
 </div>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Future releases v2.0</p></td>
-</tr>
-</tbody>
-</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="future-releases-v2-0"><a class="link" href="#future-releases-v2-0">Future releases v2.0</a></h3>
+
 </div>
 <div class="sect2">
 <h3 id="real-time-synchronisation-with-calendar-code-coming-in-v2-0-code"><a class="link" href="#real-time-synchronisation-with-calendar-code-coming-in-v2-0-code">Real time synchronisation with calendar <code>[coming in v2.0]</code></a></h3>
@@ -407,58 +366,17 @@ to remind them that a task has to be completed.</p>
 </tr>
 </tbody>
 </table>
-<h3 id="use-case-select-a-date" class="discrete">Use case: Select a date</h3>
-<div class="paragraph">
-<p><strong>MSS</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Student requests to select date required</p>
-</li>
-<li>
-<p>TB checks for its validity and changes to the required date</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>Extensions</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>1a. Date entered by the student is not valid e.g. dd/29 mm/2 yyyy/2018</p>
-<div class="ulist">
-<ul>
-<li>
-<p>1a1. TB prompts student to enter a correct date</p>
-<div class="paragraph">
-<p>Use case resumes at step 2.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
 <div class="sect2">
 <h3 id="select-deadline-feature"><a class="link" href="#select-deadline-feature">Select Deadline feature</a></h3>
 <div class="sect3">
 <h4 id="current-implementation"><a class="link" href="#current-implementation">Current Implementation</a></h4>
 <div class="paragraph">
-<p>The <code>select</code> mechanism is facilitated by <code>VersionedTaskBook</code>. The <code>edit</code> command takes in a date either in the <code>String</code> dd/mm/yyyy format or prefixes with the corresponding values. Input by the user is checked to ensure it conforms to the expected format as it goes through the <code>SelectDeadlineCommandParser.java</code> and <code>TaskBookParser.java</code>. A new <code>SelectDeadlineCommand</code> object is returned and the <code>execute</code> method will run. The date specified will be set as the deadline through <code>model.selectDeadline</code> before a success message is generated to indicate that the <code>select</code> command has been successfully executed and the deadline has been selected.
-Additionally, it implements the following operations:</p>
+<p>The <code>select</code> mechanism is facilitated by <code>VersionedTaskBook</code>.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
 <p><code>VersionedTaskBook#selectDeadline()</code> - Selects date to be set as deadline</p>
-</li>
-<li>
-<p><code>Model#updateFilteredTaskList()</code> — Updates the current list of Tasks that is being displayed to the user to show only tasks with the same deadline</p>
 </li>
 <li>
 <p><code>indicateTaskBookChanged()</code> — Event raised to indicate that the TaskBook in the model has changed.</p>
@@ -478,7 +396,7 @@ Additionally, it implements the following operations:</p>
 <p>Step 2. The user executes <code>select 1/1/2018</code> or <code>select dd/1 mm/1 yyyy/2018</code> to select the deadline.</p>
 </div>
 <div class="paragraph">
-<p>Step 3. The <code>select</code> command will call <code>Model#selectDeadline()</code> and select the deadline as 1/1/2018. <code>Model#updateFilteredTaskList()</code> will be called to update the list that is being shown to the user with only show tasks with 1/1/2018 as the deadline.</p>
+<p>Step 3. The <code>select</code> command will call <code>Model#selectDeadline()</code> and select the deadline as 1/1/2018. <code>Model#updateFilteredTaskList()</code> will be called within <code>Model#selectDeadline()</code> to update the list that is being shown to the user with only show tasks with 1/1/2018 as the deadline.</p>
 </div>
 <div class="paragraph">
 <p>Step 4. Lastly, <code>Model#commitTaskBook()</code> will be called to update the <code>TaskBookStateList</code> and <code>currentStatePointer</code>.</p>
@@ -488,9 +406,9 @@ Additionally, it implements the following operations:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/SelectDeadline.PNG" alt="SelectDeadline" width="”800”">
+<img src="../images/SelectDeadline.PNG" alt="SelectDeadline" width="”600”">
 </div>
-<div class="title">Figure 11. Sequence diagram for <code>select</code> command</div>
+<div class="title">Figure 8. Sequence diagram for <code>select</code> command</div>
 </div>
 </div>
 <div class="sect3">
@@ -564,102 +482,14 @@ Additionally, it implements the following operations:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="use-case-edit-task"><a class="link" href="#use-case-edit-task">Use case: Edit task</a></h3>
-<div class="paragraph">
-<p><strong>MSS</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Student requests to edit a selected task by providing its index and the fields with the values to be updated.</p>
-</li>
-<li>
-<p>TB checks for validity of the index and updates the fields with the values provided.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>Extensions</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>1a. Student provided an invalid index</p>
-<div class="ulist">
-<ul>
-<li>
-<p>1a1. TB outputs error message</p>
-</li>
-<li>
-<p>1a2. Student enters a new Edit command</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>1b. Student did not provide any field or values to update selected task</p>
-<div class="ulist">
-<ul>
-<li>
-<p>1b1. TB returns an error message</p>
-</li>
-<li>
-<p>1b2. Student enters a new Edit command</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>1c. Values provided by student results in the exact same task as before it was edited</p>
-<div class="ulist">
-<ul>
-<li>
-<p>1c1. TB returns no field edited error message</p>
-</li>
-<li>
-<p>1c2. Student enters a new Edit command</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>1d. Values provided by student results in an edited task exactly the same as another existing task</p>
-<div class="ulist">
-<ul>
-<li>
-<p>1d1. TB returns duplicate task info message</p>
-</li>
-<li>
-<p>1d2. Student enters a new Edit command</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
 <h3 id="edit-task-feature"><a class="link" href="#edit-task-feature">Edit Task feature</a></h3>
 <div class="sect3">
 <h4 id="current-implementation-2"><a class="link" href="#current-implementation-2">Current Implementation</a></h4>
 <div class="paragraph">
-<p>The <code>edit</code> mechanism is facilitated by <code>VersionedTaskBook</code>. The <code>edit</code> command takes in the index of the task to be edited, followed by prefixes and its corresponding new values which will replace existing values in the task to be edited. Input by the user is checked to ensure it conforms to the expected format as it goes through <code>EditTaskCommandParser.java</code> and <code>TaskBookParser.java</code>. A <code>EditTaskCommand</code> object is returned and the <code>execute</code> method will run. The validity of the index given by the user is checked and the task to be edited is retrieved from <code>model.getFilteredTaskList()</code>. A new task <code>editedTask</code> is created with the values to be edited and the task to be edit is updated with the details of the <code>editedTask’ through `model.updateTask</code> and <code>model.updateFilteredTaskList</code> before finally generating a edit task success message to indicate that the command has been successfully executed.
-Additionally, it implements the following operations:</p>
+<p>The <code>edit</code> mechanism is facilitated by <code>VersionedTaskBook</code>.</p>
+</div>
+<div class="paragraph">
+<p>Additionally, it implements the following operations:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -698,9 +528,9 @@ Given below is an example usage scenario and how the <code>edit</code> mechanism
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/EditTaskSequenceDiagram.PNG" alt="EditTaskSequenceDiagram" width="”800”">
+<img src="../images/EditTaskSequenceDiagram.PNG" alt="EditTaskSequenceDiagram" width="”600”">
 </div>
-<div class="title">Figure 12. Sequence diagram for <code>edit</code> command</div>
+<div class="title">Figure 9. Sequence diagram for <code>edit</code> command</div>
 </div>
 </div>
 <div class="sect3">
@@ -774,4 +604,4 @@ Given below is an example usage scenario and how the <code>edit</code> mechanism
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 04:23:56 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 12:52:49 UTC</div></div></div></body></html>

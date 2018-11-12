@@ -60,8 +60,10 @@
 <li><a href="#instructions-for-manual-testing">Appendix F: Instructions for Manual Testing</a>
 <ul class="sectlevel2">
 <li><a href="#launch-and-shutdown">F.1. Launch and Shutdown</a></li>
-<li><a href="#deleting-a-task">F.2. Deleting a task</a></li>
-<li><a href="#saving-data">F.3. Saving data</a></li>
+<li><a href="#selecting-a-date-as-a-deadline">F.2. Selecting a date as a deadline</a></li>
+<li><a href="#deleting-a-task">F.3. Deleting a task</a></li>
+<li><a href="#editing-a-task">F.4. Editing a task</a></li>
+<li><a href="#saving-data">F.5. Saving data</a></li>
 </ul>
 </li>
 </ul>
@@ -576,16 +578,12 @@ Note how the event is propagated through the <code>EventsCenter</code> to the <c
 <div class="sect3">
 <h4 id="current-implementation"><a class="link" href="#current-implementation">3.1.1. Current Implementation</a></h4>
 <div class="paragraph">
-<p>The <code>select</code> mechanism is facilitated by <code>VersionedTaskBook</code>. The <code>edit</code> command takes in a date either in the <code>String</code> dd/mm/yyyy format or prefixes with the corresponding values. Input by the user is checked to ensure it conforms to the expected format as it goes through the <code>SelectDeadlineCommandParser.java</code> and <code>TaskBookParser.java</code>. A new <code>SelectDeadlineCommand</code> object is returned and the <code>execute</code> method will run. The date specified will be set as the deadline through <code>model.selectDeadline</code> before a success message is generated to indicate that the <code>select</code> command has been successfully executed and the deadline has been selected.
-Additionally, it implements the following operations:</p>
+<p>The <code>select</code> mechanism is facilitated by <code>VersionedTaskBook</code>.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
 <p><code>VersionedTaskBook#selectDeadline()</code> - Selects date to be set as deadline</p>
-</li>
-<li>
-<p><code>Model#updateFilteredTaskList()</code> — Updates the current list of Tasks that is being displayed to the user to show only tasks with the same deadline</p>
 </li>
 <li>
 <p><code>indicateTaskBookChanged()</code> — Event raised to indicate that the TaskBook in the model has changed.</p>
@@ -605,7 +603,7 @@ Additionally, it implements the following operations:</p>
 <p>Step 2. The user executes <code>select 1/1/2018</code> or <code>select dd/1 mm/1 yyyy/2018</code> to select the deadline.</p>
 </div>
 <div class="paragraph">
-<p>Step 3. The <code>select</code> command will call <code>Model#selectDeadline()</code> and select the deadline as 1/1/2018. <code>Model#updateFilteredTaskList()</code> will be called to update the list that is being shown to the user with only show tasks with 1/1/2018 as the deadline.</p>
+<p>Step 3. The <code>select</code> command will call <code>Model#selectDeadline()</code> and select the deadline as 1/1/2018. <code>Model#updateFilteredTaskList()</code> will be called within <code>Model#selectDeadline()</code> to update the list that is being shown to the user with only show tasks with 1/1/2018 as the deadline.</p>
 </div>
 <div class="paragraph">
 <p>Step 4. Lastly, <code>Model#commitTaskBook()</code> will be called to update the <code>TaskBookStateList</code> and <code>currentStatePointer</code>.</p>
@@ -615,7 +613,7 @@ Additionally, it implements the following operations:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/SelectDeadline.PNG" alt="SelectDeadline" width="”800”">
+<img src="images/SelectDeadline.PNG" alt="SelectDeadline" width="”600”">
 </div>
 <div class="title">Figure 12. Sequence diagram for <code>select</code> command</div>
 </div>
@@ -695,8 +693,10 @@ Additionally, it implements the following operations:</p>
 <div class="sect3">
 <h4 id="current-implementation-2"><a class="link" href="#current-implementation-2">3.2.1. Current Implementation</a></h4>
 <div class="paragraph">
-<p>The <code>edit</code> mechanism is facilitated by <code>VersionedTaskBook</code>. The <code>edit</code> command takes in the index of the task to be edited, followed by prefixes and its corresponding new values which will replace existing values in the task to be edited. Input by the user is checked to ensure it conforms to the expected format as it goes through <code>EditTaskCommandParser.java</code> and <code>TaskBookParser.java</code>. A <code>EditTaskCommand</code> object is returned and the <code>execute</code> method will run. The validity of the index given by the user is checked and the task to be edited is retrieved from <code>model.getFilteredTaskList()</code>. A new task <code>editedTask</code> is created with the values to be edited and the task to be edit is updated with the details of the <code>editedTask’ through `model.updateTask</code> and <code>model.updateFilteredTaskList</code> before finally generating a edit task success message to indicate that the command has been successfully executed.
-Additionally, it implements the following operations:</p>
+<p>The <code>edit</code> mechanism is facilitated by <code>VersionedTaskBook</code>.</p>
+</div>
+<div class="paragraph">
+<p>Additionally, it implements the following operations:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -735,7 +735,7 @@ Given below is an example usage scenario and how the <code>edit</code> mechanism
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/EditTaskSequenceDiagram.PNG" alt="EditTaskSequenceDiagram" width="”800”">
+<img src="images/EditTaskSequenceDiagram.PNG" alt="EditTaskSequenceDiagram" width="”600”">
 </div>
 <div class="title">Figure 13. Sequence diagram for <code>edit</code> command</div>
 </div>
@@ -1777,19 +1777,7 @@ Use case ends.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Student requests to add a new milestone</p>
-</li>
-<li>
-<p>TB returns a list of tasks entered previously</p>
-</li>
-<li>
-<p>Student selects the task to add the milestone to</p>
-</li>
-<li>
-<p>TB asks for the milestone description and rank</p>
-</li>
-<li>
-<p>Student provides the milestone description and rank</p>
+<p>Student requests to add a new milestone and provides the index, milestone description and rank</p>
 </li>
 <li>
 <p>TB adds the milestone to the selected task</p>
@@ -1805,11 +1793,11 @@ Use case ends.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>2a. Task Book is currently empty as no tasks has been added yet.</p>
+<p>1a. Student enters an invalid index when list of tasks added is empty</p>
 <div class="ulist">
 <ul>
 <li>
-<p>2a1. TB outputs error message</p>
+<p>1a1. TB outputs error message for invalid index</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -1818,16 +1806,39 @@ Use case ends.</p>
 </div>
 </li>
 <li>
-<p>5a. Student enters an milestone description and rank with invalid format</p>
+<p>1b. Student enters index, milestone description and rank without all the required prefixes</p>
 <div class="ulist">
 <ul>
 <li>
-<p>5a1. TB requests for milestone description and rank with valid format</p>
+<p>1b1. TB outputs error message for invalid format</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p>5a2. Student enters milestone description and rank with valid format</p>
+<p>1c. Student enters duplicate milestone description</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1c1. TB outputs error message for duplicate milestone description</p>
 <div class="paragraph">
-<p>Use case resumes at step 6.</p>
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>1d. Student enters duplicate rank</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1d1. TB outputs error message for duplicate rank</p>
+<div class="paragraph">
+<p>Use case ends.</p>
 </div>
 </li>
 </ul>
@@ -1938,7 +1949,95 @@ Expected: The most recent window size and location is retained.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-task"><a class="link" href="#deleting-a-task">F.2. Deleting a task</a></h3>
+<h3 id="selecting-a-date-as-a-deadline"><a class="link" href="#selecting-a-date-as-a-deadline">F.2. Selecting a date as a deadline</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select a deadline</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test case: <code>select 1</code><br>
+Expected: No deadline selected. Message of invalid command format error is shown.</p>
+</li>
+<li>
+<p>Test case: <code>select dd/1</code><br>
+Expected: No deadline selected. Message of invalid command format error is shown.</p>
+</li>
+<li>
+<p>Prerequisite: Select command has not been called before.<br>
+Test case: <code>select 1/1</code><br>
+Expected: Deadline of 1/1/2018 is selected. Message of select success is shown.</p>
+</li>
+<li>
+<p>Prerequisite: Select command has not been called before.<br>
+Test case: <code>select dd/1 mm/1</code><br>
+Expected: Deadline of 1/1/2018 is selected. Message of select success is shown.</p>
+</li>
+<li>
+<p>Prerequisite: Latest select command selected a deadline with 2020 as year (e.g.1/1/2020)<br>
+Test case: 'select 1/1`<br>
+Expected: Deadline of 1/1/2020 is selected. Message of select success is shown.</p>
+</li>
+<li>
+<p>Prerequisite: Latest select command selected a deadline with 2020 as year (e.g.1/1/2020)<br>
+Test case: 'select dd/1 mm/1`<br>
+Expected: Deadline of 1/1/2020 is selected. Message of select success is shown.</p>
+</li>
+<li>
+<p>Test case: <code>select 1/1/2018</code><br>
+Expected: Deadline of 1/1/2018 is selected. Message of select success is shown.</p>
+</li>
+<li>
+<p>Test case: <code>select dd/1 mm/1 yyyy/2018</code><br>
+Expected: Deadline of 1/1/2018 is selected. Message of select success is shown.</p>
+</li>
+<li>
+<p>Test case: <code>select 29/2/2018</code><br>
+Expected: No deadline selected. Message of invalid date error is shown.</p>
+</li>
+<li>
+<p>Test case: <code>select 1/13/2018</code><br>
+Expected: No deadline selected. Message of invalid date error is shown.</p>
+</li>
+<li>
+<p>Test case: <code>select 1/1/201</code><br>
+Expected: No deadline selected. Message of invalid date error is shown.</p>
+</li>
+<li>
+<p>Test case: <code>select a29/2/2018</code><br>
+Expected: No deadline selected. Message of deadline contains illegal characters error is shown.</p>
+</li>
+<li>
+<p>Test case: <code>select 01/01/02018</code><br>
+Expected: Deadline of 1/1/2018 is selected. Message of select success is shown.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Updated filteredTaskList shown after selecting deadline</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: Multiple tasks in the list with different deadlines. At least one task has the deadline of 1/1/2018.</p>
+</li>
+<li>
+<p>Test case: <code>select 1/1/2018</code><br>
+Expected: Deadline of 1/1/2018 is selected. Filtered task list only shows tasks with deadline of 1/1/2018.</p>
+</li>
+<li>
+<p>Test case: <code>select 29/2/2018</code><br>
+Expected: No deadline selected. Filtered task list will not be updated and will show what is was showing previously.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-task"><a class="link" href="#deleting-a-task">F.3. Deleting a task</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1970,7 +2069,83 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-data"><a class="link" href="#saving-data">F.3. Saving data</a></h3>
+<h3 id="editing-a-task"><a class="link" href="#editing-a-task">F.4. Editing a task</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Editing a task while all tasks are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all tasks using <code>list</code> command. Only 3 tasks are in the list.</p>
+</li>
+<li>
+<p>Test case: <code>edit</code><br>
+Expected: Task is not edited. Message of invalid command format is shown.</p>
+</li>
+<li>
+<p>Test case: <code>edit 1</code><br>
+Expected: Task is not edited. Message of invalid command format is shown.</p>
+</li>
+<li>
+<p>Test case: <code>edit t/Do CS2113 tutorial</code><br>
+Expected: Task is not edited. Message of invalid command format is shown.</p>
+</li>
+<li>
+<p>Test case: <code>edit i/</code><br>
+Expected: Task is not edited. Message of empty index is shown.</p>
+</li>
+<li>
+<p>Test case: <code>edit i/1 t/</code><br>
+Expected: Task is not edited. Message of empty title is shown.</p>
+</li>
+<li>
+<p>Test case: <code>edit i/1 d/</code><br>
+Expected: Task is not edited. Message of empty description is shown.</p>
+</li>
+<li>
+<p>Test case: <code>edit i/1 c/</code><br>
+Expected: Task is not edited. Message of empty module code is shown.</p>
+</li>
+<li>
+<p>Test case: <code>edit i/1 p/</code><br>
+Expected: Task is not edited. Message of empty priority level is shown.</p>
+</li>
+<li>
+<p>Test case: <code>edit i/1 h/</code><br>
+Expected: Task is not edited. Message of empty hours is shown.</p>
+</li>
+<li>
+<p>Test case: <code>edit i/0 t/Do CS2113 tutorial</code><br>
+Expected: Task is not edited. Message of invalid index (index must be a non-zero unsigned integer) is shown.</p>
+</li>
+<li>
+<p>Test case: <code>edit i/4 t/Do CS2113 tutorial</code><br>
+Expected: Task is not edited. Message of invalid task displayed index (the task index provided is invalid) is shown.</p>
+</li>
+<li>
+<p>Prerequisites: Tasks in list do not have the exact same fields.<br>
+Test case: <code>edit i/1 t/Do CS2113 tutorial</code><br>
+Expected: Task at index 1 is edited and the original title is replaced by "Do CS2113 tutorial". Message of edit success is shown.</p>
+</li>
+<li>
+<p>Prerequisites: Task at i/1 is exactly the same another existing task, existingTask, except for the title. The title of existingTask is "Do CS2113 tutorial".<br>
+Test case: <code>edit i/1 t/Do CS2113 tutorial</code><br>
+Expected: Task is not edited. Message of duplicate task error is shown.</p>
+</li>
+<li>
+<p>Prerequisites: Task at i/1 has a title of "Do CS2113 tutorial".<br>
+Test case: <code>edit i/1 t/Do CS2113 tutorial</code><br>
+Expected: Task is not edited. Message of task not edited error is shown.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="saving-data"><a class="link" href="#saving-data">F.5. Saving data</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1990,4 +2165,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 04:23:56 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 12:52:49 UTC</div></div></div></body></html>
